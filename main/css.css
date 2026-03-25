@@ -1,7 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
     margin: 0%;
 }
-header {
+nav {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between;*/
@@ -9,6 +12,18 @@ header {
   background-color: antiquewhite;
   margin-top: 0;
   padding: 15px;
+  position:sticky;
+}
+.nav-bar {
+  text-align: center;
+  margin-top: 16px;
+  text-decoration: none;
+  position: relative;
+}
+.nav-bar::after {
+  content: "";
+  position: absolute;
+
 }
 .JN {
   font-size: 40px;
@@ -66,6 +81,19 @@ h2 {
     .image {
         height: 300px; /* Make main banner smaller on phones */
     }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .JN {
+      text-align: center;
+    }
+    .search {
+      width: 120px;
+      height: 40px;
+    }
 }
 
 .pr {
@@ -74,7 +102,7 @@ h2 {
 .us {
   background-color: rgb(134, 131, 131);
 }
-#hu {
+#aboutus {
   text-align: center;
   color: aliceblue;
   margin-bottom: 30px;

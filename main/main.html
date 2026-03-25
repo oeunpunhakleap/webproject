@@ -9,22 +9,22 @@
   <script src="https://kit.fontawesome.com/7e93bcb076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <p class = "JN"> Jeat Nas</p>
-        <p> Home</p>
-        <p> Foods Recommendation</p>
-        <button class = "search">
-              Search....      <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <p> About us</p> 
-    </header>
+   <nav class = "container">
+            <p class = "JN"> Jeat Nas</p>
+            <a class = "nav-bar">Home</a>
+            <a  href = "#food-rec" class = "nav-bar">Food Recommendation</a>
+            <button class = "search">
+                Search....      <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href = "#aboutus" class = "nav-bar"> About us</a>
+   </nav>
 
 <!-- MAIN -->
     <main>
         <section >
             <img src ="https://i.pinimg.com/1200x/96/15/cf/9615cf761f6526d77849bac41e0b2d03.jpg" class = "image">
         </section>
-        <section>
+        <section id = "food-rec" >
             <h2>Foods Recommendation </h2>
         </section>
     <!-- rec food -->
@@ -110,8 +110,10 @@
                 </div>
             </section>
         </section>
+        <section id = "aboutus">
+            <h2 ></h2>About Us</h2>
+        </section>
         <section class = "us">
-            <h2 id = "hu"> About Us</h2>
             <p class = "pu">Jeat Nas was created in 2026 with a vision to help you thinking less about which food to cook</p>      
         </section>
     </main>
