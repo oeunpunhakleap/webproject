@@ -15,7 +15,10 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://m.aeononlineshopping.com/product/-/17400?store_id=3",
-        coconut_cream: "https://m.aeononlineshopping.com/product/-/67296?store_id=1"
+        coconut_cream: "https://m.aeononlineshopping.com/product/-/67296?store_id=1",
+        chicken: "https://m.aeononlineshopping.com/product/-/4866?store_id=1",
+        potatoes: "https://m.aeononlineshopping.com/product/-/13832?store_id=1",
+        carrots: "https://m.aeononlineshopping.com/product/-/15252?store_id=1",
     },
     makro: {
         fish: "https://www.makrocambodiaclick.com/en/products/920302/",
@@ -30,7 +33,10 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://www.makrocambodiaclick.com/en/products/436813/",
-        coconut_cream: ""
+        coconut_cream: "",
+        chicken: "https://www.makrocambodiaclick.com/en/products/437721/",
+        potatoes: "https://www.makrocambodiaclick.com/en/products/842871/",
+        carrots: "https://www.makrocambodiaclick.com/en/products/430751/",
     },
 
     deli: {
@@ -46,7 +52,10 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://delishop.asia/product/red-chilli-pepper-small",
-        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small"
+        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
+        chicken: "https://delishop.asia/product/chicken-small",
+        potatoes: "https://delishop.asia/product/potato-1kg-delishop-fresh",
+        carrots: "https://delishop.asia/product/carrot-big",
     }
 };
 
