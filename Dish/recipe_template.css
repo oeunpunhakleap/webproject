@@ -3,6 +3,14 @@ body{
     font-family: "Quintessential";
   }
 
+h2{
+  font-family: "Bokor";
+}
+
+#calories{
+  font-family: "Bahiana";
+}
+
 /* everything before the ingredients */
 
 .intro {
@@ -17,6 +25,7 @@ body{
 
 .intro img{
   justify-content: flex-end;
+  border-radius: 12px;
 }
 
 #calories{
@@ -48,7 +57,7 @@ body{
   color: white;
   text-decoration: none;
   padding: 5px 10px;
-  background-color: blue;
+  background-color: rgb(140, 14, 14);
   display: inline-block;
   margin-top: 5px;
 }
@@ -80,10 +89,17 @@ body{
 
 /* recipe */
 
-.recipe ol {
-    list-style: none; 
-    padding-left: 0;
+.recipe ol{ 
+  list-style: none; 
+  padding-left: 0;
 }
+.recipe li h4{
+  color: brown;
+}
+
+
+
+
 
 footer{
   text-align: center;
