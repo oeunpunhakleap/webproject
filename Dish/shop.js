@@ -15,7 +15,15 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://m.aeononlineshopping.com/product/-/17400?store_id=3",
-        coconut_cream: "https://m.aeononlineshopping.com/product/-/67296?store_id=1"
+        coconut_cream: "https://m.aeononlineshopping.com/product/-/67296?store_id=1",
+        fish:"https://m.aeononlineshopping.com/product/-/63880?store_id=1",
+        pork:"",
+        kroeung:"",
+        vegetables:"",
+        roasted_rice:"",
+        prahok:"",
+        leaves:"",
+
     },
     makro: {
         fish: "https://www.makrocambodiaclick.com/en/products/920302/",
@@ -30,7 +38,14 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://www.makrocambodiaclick.com/en/products/436813/",
-        coconut_cream: ""
+        coconut_cream: "",
+        fish:""​,
+        pork:"",
+        kroeung:"",
+        vegetables:"",
+        roasted_rice:"",
+        prahok:"",
+        leaves:"",
     },
 
     deli: {
@@ -46,7 +61,14 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://delishop.asia/product/red-chilli-pepper-small",
-        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small"
+        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
+        fish:"https://delishop.asia/product/fish-local-1pc-100g-300g0",
+        pork:"",
+        kroeung:"",
+        vegetables:"",
+        roasted_rice:"",
+        prahok:"",
+        leaves:"",
     }
 };
 
