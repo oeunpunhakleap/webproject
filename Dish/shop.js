@@ -23,6 +23,10 @@ const links = {
         pineapple: "https://m.aeononlineshopping.com/product/-/3669?store_id=1",
         tomatoes: "https://m.aeononlineshopping.com/product/-/6176?store_id=1",
         tamarind:"https://m.aeononlineshopping.com/product/-/2601?store_id=1",
+        pumpkin: "https://m.aeononlineshopping.com/product/-/16865?store_id=1",
+        palm_sugar: "https://m.aeononlineshopping.com/product/-/1021?store_id=1",
+        pandan: "",
+        vanilla_extract: "",
     },
     makro: {
         fish: "https://www.makrocambodiaclick.com/en/products/920302/",
@@ -45,6 +49,10 @@ const links = {
         pineapple: "https://www.makrocambodiaclick.com/en/products/120253/",
         tomatoes: "https://www.makrocambodiaclick.com/en/products/838235/",
         tamarind:"https://www.makrocambodiaclick.com/en/products/144146/",
+        pumpkin: "",
+        palm_sugar: "https://www.makrocambodiaclick.com/en/products/419749/",
+        pandan: "",
+        vanilla_extract: "https://www.makrocambodiaclick.com/en/products/417013/",
     },
 
     deli: {
@@ -68,6 +76,10 @@ const links = {
         pineapple: "https://delishop.asia/product/pineapple",
         tomatoes: "https://delishop.asia/product/ripe-tomato-500g-delishop-fresh",
         tamerind:"https://delishop.asia/product/tamarind-cinnamon-sweet-sauce",
+        pumpkin: "https://delishop.asia/product/pumpkin",
+        palm_sugar: "https://delishop.asia/product/palm-sugar-bottle",
+        pandan: "",
+        vanilla_extract: "https://delishop.asia/product/vanilla-syrup",
     }
 };
 
