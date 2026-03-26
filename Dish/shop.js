@@ -19,6 +19,10 @@ const links = {
         chicken: "https://m.aeononlineshopping.com/product/-/4866?store_id=1",
         potatoes: "https://m.aeononlineshopping.com/product/-/13832?store_id=1",
         carrots: "https://m.aeononlineshopping.com/product/-/15252?store_id=1",
+        morning_glory: "https://m.aeononlineshopping.com/product/-/16877?store_id=1",
+        pineapple: "https://m.aeononlineshopping.com/product/-/3669?store_id=1",
+        tomatoes: "https://m.aeononlineshopping.com/product/-/6176?store_id=1",
+        tamarind:"https://m.aeononlineshopping.com/product/-/2601?store_id=1",
     },
     makro: {
         fish: "https://www.makrocambodiaclick.com/en/products/920302/",
@@ -37,6 +41,10 @@ const links = {
         chicken: "https://www.makrocambodiaclick.com/en/products/437721/",
         potatoes: "https://www.makrocambodiaclick.com/en/products/842871/",
         carrots: "https://www.makrocambodiaclick.com/en/products/430751/",
+        morning_glory: "https://www.makrocambodiaclick.com/en/products/826829/",
+        pineapple: "https://www.makrocambodiaclick.com/en/products/120253/",
+        tomatoes: "https://www.makrocambodiaclick.com/en/products/838235/",
+        tamarind:"https://www.makrocambodiaclick.com/en/products/144146/",
     },
 
     deli: {
@@ -56,6 +64,10 @@ const links = {
         chicken: "https://delishop.asia/product/chicken-small",
         potatoes: "https://delishop.asia/product/potato-1kg-delishop-fresh",
         carrots: "https://delishop.asia/product/carrot-big",
+        morning_glory: "https://delishop.asia/product/water-morning-glory",
+        pineapple: "https://delishop.asia/product/pineapple",
+        tomatoes: "https://delishop.asia/product/ripe-tomato-500g-delishop-fresh",
+        tamerind:"https://delishop.asia/product/tamarind-cinnamon-sweet-sauce",
     }
 };
 
