@@ -17,12 +17,12 @@ const links = {
         red_chili: "https://m.aeononlineshopping.com/product/-/17400?store_id=3",
         coconut_cream: "https://m.aeononlineshopping.com/product/-/67296?store_id=1",
         fish:"https://m.aeononlineshopping.com/product/-/63880?store_id=1",
-        pork:"",
-        kroeung:"",
-        vegetables:"",
-        roasted_rice:"",
-        prahok:"",
-        leaves:"",
+        pork:"https://m.aeononlineshopping.com/product/-/52642?store_id=1",
+        kroeung:"https://aeononlineshopping.com/product/-/4267?store_id=2",
+        vegetables:"https://m.aeononlineshopping.com/product/-/2819?store_id=2",
+        roasted_rice:"https://m.aeononlineshopping.com/product/-/2819?store_id=2",
+        prahok:"https://m.aeononlineshopping.com/product/-/37428?store_id=2",
+        leaves:"https://aeononlineshopping.com/product/-/33142?store_id=1",
 
     },
     makro: {
