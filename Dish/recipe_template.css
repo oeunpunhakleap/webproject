@@ -94,7 +94,11 @@ h2{
   padding-left: 0;
 }
 .recipe li h4{
-  color: brown;
+  color: rgb(140, 14, 14);
+}
+.recipe h2{
+  text-align: center;
+  color: rgb(140, 14, 14);
 }
 
 

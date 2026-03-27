@@ -1,0 +1,170 @@
+<!-- Varin and bopha -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samlor Machu</title>
+    <link rel="stylesheet" href="recipe_template.css">
+    <!-- google font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <script src="shop.js"></script>
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Sour Fish Soup</h1>
+                <h2>សម្លម្ជូរត្រី</h2>
+                <p>Samlor Machu is a traditional Khmer sour soup made with fresh fish, morning glory, and a mix of tangy ingredients like tamarind and pineapple. It has a light, refreshing flavor that balances sour and savory, making it a comforting and healthy dish often served with steamed rice.</p>
+                <p id="calories">Calories <br> 900 kcal (300 kcal per serving)</p>
+            </section>
+            <img src="../images/samlur_machu.jpg" alt="sour soup" width="300" height="300">
+        </section>
+
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Fish (Snakehead or Tilapia)</p>
+                <img src="../images/snakehead.png" alt="fish">
+                <p>400g</p>
+                <a href="#" onclick="openModal('fish'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Morning Glory</p>
+                <img src="../images/morning_glory.jpeg" alt="morning_glory">
+                <p>1 bunch</p>
+                <a href="#" onclick="openModal('morning_glory'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Pineapple</p>
+                <img src="../images/pinapple.webp" alt="pineapple">
+                <p>1 cup (sliced)</p>
+                <a href="#" onclick="openModal('pineapple'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Tomatoes</p>
+                <img src="../images/tomato.webp" alt="tomatoes">
+                <p>2 medium</p>
+                <a href="#" onclick="openModal('tomatoes'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Tamarind Paste</p>
+                <img src="../images/tamarind_paste.jpg" alt="tamarind">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('tamarind'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Lemongrass</p>
+                <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('lemongrass'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Galangal</p>
+                <img src="../images/galangal.webp" alt="galangal">
+                <p>1 small piece</p>
+                <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Chili</p>
+                <img src="../images/red_chili.webp" alt="chili">
+                <p>Optional, 2 pieces</p>
+                <a href="#" onclick="openModal('chili'); return false">Buy Now</a>
+            </section>
+        </section>
+        <section class="recipe">
+            <ol>
+                <li>
+                    <h4>Step 1: Prepare the ingredients</h4>
+                    <ul>
+                        <li>Cut the fish into medium pieces</li>
+                        <li>Wash and cut morning glory into sections</li>
+                        <li>Slice pineapple and tomatoes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Prepare the broth</h4>
+                    <ul>
+                        <li>Bring a pot of water to a boil</li>
+                        <li>Add lemongrass and galangal</li>
+                        <li>Let it simmer to release the aroma</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Add the sour base</h4>
+                    <ul>
+                        <li>Add tamarind paste to the broth</li>
+                        <li>Stir well until fully dissolved</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Cook the fish</h4>
+                    <ul>
+                        <li>Add the fish pieces into the soup</li>
+                        <li>Cook until the fish is tender</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Add vegetables</h4>
+                    <ul>
+                        <li>Add pineapple and tomatoes</li>
+                        <li>Then add morning glory</li>
+                        <li>Cook briefly until vegetables are just tender</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Final touches</h4>
+                    <ul>
+                        <li>Add chili if desired</li>
+                        <li>Taste and adjust flavor</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 7: Serve</h4>
+                    <ul>
+                        <li>Serve hot with steamed rice</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+    </main>
+    <footer>
+       <a href="https://youtu.be/bwQ5awe8NOA?si=BwoxGhHuCkN1cuwN">Here is the link to a tutorial youtube video </a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
