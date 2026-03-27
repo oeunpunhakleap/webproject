@@ -12,7 +12,10 @@ nav {
   background-color: antiquewhite;
   margin-top: 0;
   padding: 15px;
-  position:fixed;
+  position: fixed;
+  top: 0;         /* Ensure it starts at the very top */
+  left: 0;        /* Ensure it starts at the very left */
+  z-index: 1000;  /* This pulls it to the very front layer */
 }
 .nav-bar {
   text-align: center;
@@ -34,10 +37,54 @@ nav {
   border-color: red;
 }
 
-.image {
-  width: 100%;
-  height: fit-content;
-  object-fit: fill;
+/* TEXT and IMAGE */
+.topimage-container {
+    position: relative; 
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.topimage-container .image {
+    width: 100%;
+    height: fit-content;
+    object-fit: fill;
+    object-fit: cover; 
+    display: block;
+    filter: brightness(40%); 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.text-overlay h1 {
+    font-size: 80px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.text-overlay p {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+.btn-menu {
+    display: inline-block;
+    background-color: #b0976d; 
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
 }
 .rec-card{
   background-color: rgb(105, 36, 6);
@@ -51,6 +98,7 @@ h2{
   
 }
 
+/*  RECOMMNET CARD */
 .rec-card-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -83,7 +131,7 @@ h2{
     padding: 15px;
     text-align: center;
 }
-
+/* RESPONVE */
 @media (max-width: 600px) {
     .rec-card-grid {
         grid-template-columns: 1fr; /* 1 column for phones */
