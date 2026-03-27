@@ -47,7 +47,7 @@ nav {
 }
 h2{
   text-align: center;
-  color: aliceblue;
+  color: rgb(103, 53, 3);
   
 }
 
@@ -66,6 +66,12 @@ h2{
     flex-direction: column;
     border-radius: 20px;
     box-shadow:  rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover{
+  transform: translateY(-10px);
 }
 .card-image img{
     height: fit-content;
