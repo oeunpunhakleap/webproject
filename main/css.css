@@ -105,24 +105,29 @@ h2{
     padding: 20px;
     width: 70%;
     margin: 0 auto;
+    align-items: start;
 }
 .card {
-    background: #ffffff;
-    border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    box-shadow:  rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     text-decoration: none;
     color: black;
-}
+    background: #ffffff;
 
-.card:hover{
-  transform: translateY(-10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    position: relative;
+    z-index: 1;         
+    transform-origin: center; 
+}
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 30px;
+    z-index: 10; 
 }
 .card-image {
     width: 100%;
-    height: 200px; /* Adjust this value to your preferred height */
+    height: 200px;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
 }
@@ -136,14 +141,46 @@ h2{
     padding: 15px;
     text-align: center;
 }
+
+.card-details {
+    max-height: 0;
+    opacity: 0; 
+    transition: max-height 0.4s ease, opacity 0.3s ease; 
+    overflow: hidden; 
+    
+    border-top: 1px solid #eee; 
+    margin-top: 0;
+    padding: 0 15px; 
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.card-details p {
+    margin: 10px 0;
+}
+.card-details i {
+    color: rgb(103, 53, 3); 
+    margin-right: 5px;
+}
+
+.card:hover .card-details {
+    max-height: 100px; 
+    opacity: 1;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
 /* RESPONVE */
 @media (max-width: 600px) {
     .rec-card-grid {
-        grid-template-columns: 1fr; /* 1 column for phones */
+        grid-template-columns: 1fr; 
     }
     
     .image {
-        height: 300px; /* Make main banner smaller on phones */
+        height: 300px; 
     }
     .container {
       display: flex;
