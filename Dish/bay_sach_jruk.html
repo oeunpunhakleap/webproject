@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay Sach Jruk</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+<script src="shop.js"></script>
+
+<main>
+    <section class="intro">
+
+        <section class="description">
+            <h1>Bay Sach Jruk</h1>
+            <h2>បាយសាច់ជ្រូក</h2>
+            <p>Bay Sach Jruk is one of Cambodia’s most popular breakfast dishes, made with thinly sliced pork marinated in garlic, soy sauce, fish sauce, and coconut milk, then grilled until tender and slightly caramelized. It is served with rice, fresh vegetables, pickles, and often a light soup, offering a perfect balance of sweet, savory, and smoky flavors.</p>
+            <p id="calories">Calories <br> 600 kcal per serving</p>
+        </section>
+
+        <img src="../images/bay_sach_jruk.jpg" alt="Bay Sach Jruk" width="300">
+
+    </section>
+
+    <section class="ingredients">
+
+        <section class="ingredient">
+            <p>Pork (Thinly Sliced)</p>
+            <img src="../images/pork.png" alt="pork">
+            <p>300g</p>
+            <a href="#" onclick="openModal('pork'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Garlic</p>
+            <img src="../images/garlic.jpg" alt="garlic">
+            <p>4 cloves (minced)</p>
+            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Soy Sauce</p>
+            <img src="../images/soy_sauce.jpg" alt="soy sauce">
+            <p>2 tbsp</p>
+            <a href="#" onclick="openModal('soy'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fish Sauce</p>
+            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Sugar</p>
+            <img src="../images/sugar.jpg" alt="sugar">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Coconut Milk</p>
+            <img src="../images/coconut_milk.jpg" alt="coconut milk">
+            <p>2 tbsp</p>
+            <a href="#" onclick="openModal('coconut'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Cooked Rice</p>
+            <img src="../images/rice.jpg" alt="rice">
+            <p>2 cups</p>
+            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Pickled Vegetables (Carrot & Radish)</p>
+            <img src="../images/pickles.jpg" alt="pickles">
+            <p>1 cup</p>
+            <a href="#" onclick="openModal('pickles'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Cucumber & Tomato</p>
+            <img src="../images/cucumber.jpg" alt="cucumber">
+            <p>Sliced</p>
+            <a href="#" onclick="openModal('vegetables'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fried Egg (Optional)</p>
+            <img src="../images/eggs.jpg" alt="egg">
+            <p>1 egg</p>
+            <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+        </section>
+
+    </section>
+
+    <section class="recipe">
+        <h2>Recipe</h2>
+
+        <ol>
+
+            <li>
+                <h4>Step 1: Marinate the pork</h4>
+                <ul>
+                    <li>Mix garlic, soy sauce, fish sauce, sugar, and coconut milk</li>
+                    <li>Add sliced pork and mix well</li>
+                    <li>Marinate for at least 1 hour (or overnight for best flavor)</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 2: Grill the pork</h4>
+                <ul>
+                    <li>Heat a grill or pan (charcoal grill is best)</li>
+                    <li>Cook pork until golden brown and slightly charred</li>
+                    <li>Turn occasionally to get even color</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 3: Prepare vegetables</h4>
+                <ul>
+                    <li>Slice cucumber and tomato</li>
+                    <li>Prepare pickled carrot and radish</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 4: Serve</h4>
+                <ul>
+                    <li>Place rice on a plate</li>
+                    <li>Add grilled pork on top</li>
+                    <li>Serve with vegetables and pickles</li>
+                    <li>Add fried egg on top (optional)</li>
+                    <li>Optional: serve with a bowl of light soup</li>
+                </ul>
+            </li>
+
+        </ol>
+    </section>
+</main>
+
+<footer>
+   <a href="https://youtu.be/sa0inXURh90?si=ZcrTQELquZm85z8a">Here is the link to a tutorial youtube video</a>
+</footer>
+
+<div id="shopModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Select a shop</h3>
+        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+
+        <button onclick="goToShop('aeon')">AEON</button>
+        <button onclick="goToShop('makro')">Makro</button>
+        <button onclick="goToShop('deli')">Deli</button>
+
+        <br><br>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
+```

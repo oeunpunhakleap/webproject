@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braised Pork with Eggs</title>
+    <link rel="stylesheet" href="recipe_template.css">
+    <!-- google font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+<body>
+    <script src="shop.js"></script>
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Braised Pork with Eggs</h1>
+                <h2>ខសាច់ជ្រូកពង</h2>
+                <p>This dish is made by slowly cooking pork belly and boiled eggs in a caramel sauce using sugar, fish sauce, and coconut water. It has a rich, sweet and savory flavor with tender meat and a dark glossy sauce.</p>
+                <p id="calories">Calories <br> 1300 kcal (430 kcal per serving)</p>
+            </section>
+            <img class="imga" src="../images/braised_pork_eggs.jpg" alt="Braised Pork with Eggs" width="300">
+        </section>
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Pork Belly</p>
+                <img src="../images/pork.jpg" alt="pork">
+                <p>400g</p>
+                <a href="#" onclick="openModal('pork') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Eggs</p>
+                <img src="../images/eggs.jpg" alt="eggs">
+                <p>4 eggs</p>
+                <a href="#" onclick="openModal('eggs') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Garlic</p>
+                <img src="../images/garlic.jpg" alt="garlic">
+                <p>4 cloves</p>
+                <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Sugar</p>
+                <img src="../images/sugar.jpg" alt="sugar">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('sugar') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Fish Sauce</p>
+                <img src="../images/fish_sauce.jpg" alt="fish_sauce">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('fish_sauce') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Black Pepper</p>
+                <img src="../images/pepper.jpg" alt="pepper">
+                <p>½ tsp</p>
+                <a href="#" onclick="openModal('pepper') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Coconut Water</p>
+                <img src="../images/coconut.jpg" alt="coconut">
+                <p>1½ cups (350ml)</p>
+                <a href="#" onclick="openModal('coconut') ; return false">Buy Now</a>
+            </section>
+
+        </section>
+
+        <section class="recipe">
+            <ol>
+
+                <li>
+                    <h4>Step1: Prepare the eggs</h4>
+                    <ul>
+                        <li>Boil eggs until fully cooked</li>
+                        <li>Peel and set aside</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Make caramel</h4>
+                    <ul>
+                        <li>Heat sugar in a pot</li>
+                        <li>Cook until golden brown</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Cook pork</h4>
+                    <ul>
+                        <li>Add pork belly and garlic</li>
+                        <li>Stir until slightly browned</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Add seasoning</h4>
+                    <ul>
+                        <li>Add fish sauce and pepper</li>
+                        <li>Mix well</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Add liquid</h4>
+                    <ul>
+                        <li>Pour coconut water</li>
+                        <li>Bring to a boil</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Simmer</h4>
+                    <ul>
+                        <li>Add boiled eggs</li>
+                        <li>Cook for 30–40 minutes</li>
+                        <li>Let sauce reduce and thicken</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 7: Serve</h4>
+                    <ul>
+                        <li>Serve hot with rice</li>
+                    </ul>
+                </li>
+
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+       <a href="https://youtu.be/oUNmt0UPq_Q?si=xxg1P2m-GWqrABLg">Here is the link to a tutorial youtube video </a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
