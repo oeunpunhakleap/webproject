@@ -1,0 +1,153 @@
+<!-- Varin and bopha -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terk Kroeung</title>
+    <link rel="stylesheet" href="recipe_template.css">
+    <!-- google font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+
+
+</head>
+<body>
+    <script src="shop.js"></script>
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Terk Kroueng</h1>
+                <h2>ទឹកគ្រឿង</h2>
+                <p>Terk Kroeung is a traditional Khmer fish dip made with finely ground herbs, kroeung spices, and grilled or steamed fish, served with fresh vegetables.</p>
+                <p id="calories">Calories <br> 90 kcal per serving</p>
+            </section>
+            <img class="imga" src="../images/terk_kroeung.webp" alt="Ah Mok" width="300">
+        </section>
+
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Snake Head Fish</p>
+                <img src="../images/snakehead.png" alt="fish">
+                <p>1 fish</p>
+                <a href="#" onclick="openModal('fish') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Garlic</p>
+                <img src="../images/garlic.jpg" alt="garlic">
+                <p>2 cloves</p>
+                <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Lemongrass</p>
+                <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('lemongrass') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Galangal</p>
+                <img src="../images/galangal.webp" alt="galangal">
+                <p>1 inch piece</p>
+                <a href="#" onclick="openModal('galangal') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Kaffir lime leaves</p>
+                <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir-lime-leaves">
+                <p>4 leaves</p>
+                <a href="#" onclick="openModal('kaffir') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cucumber</p>
+                <img src="../images/cucumber.jpg" alt="cucumber">
+                <p>1 medium</p>
+                <a href="#" onclick="openModal('cucumber') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cabbage (Boiled)</p>
+                <img src="../images/boiled_cabbage.jpg" alt="cabbage">
+                <p>1</p>
+                <a href="#" onclick="openModal('cabbage') ; return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Long Beans</p>
+                <img src="../images/long_bean.jpg" alt="long beans">
+                <p>100g</p>
+                <a href="#" onclick="openModal('long_beans') ; return false">Buy Now</a>
+            </section>
+        </section>
+        <section class="recipe">
+            <ol>
+                <li>
+                    <h4>Step 1: Prepare the fish</h4>
+                    <ul>
+                        <li>Clean and fillet the fish</li>
+                        <li>Cut into small pieces</li>
+                        <li>Set aside</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Make the herb paste</h4>
+                    <ul>
+                        <li>Pound or blend garlic, lemongrass, and kaffir lime leaves</li>
+                        <li>Process until smooth</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Cook the fish</h4>
+                    <ul>
+                        <li>Lightly steam or cook the fish pieces until fully done</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Combine fish with herbs to make dip</h4>
+                    <ul>
+                        <li>Mix the cooked fish with the herb paste</li>
+                        <li>Mash or stir until it becomes a smooth dip</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Serve with vegetables</h4>
+                    <ul>
+                        <li>Slice cucumber, cabbage, and long beans</li>
+                        <li>Serve the fish-herb dip alongside the vegetables</li>
+                        <li>Eat by dipping vegetables into the dip</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+    </main>
+    <footer>
+       <a href="https://youtu.be/e8iosJ0GirU?si=NfgWDJE5167In4UG">Here is the link to a tutorial youtube video </a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
