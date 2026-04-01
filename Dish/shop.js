@@ -46,8 +46,7 @@ const links = {
         banana_leaves: "",
         noni_leaves: "",
         red_chili: "https://delishop.asia/product/red-chilli-pepper-small",
-        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small"
-        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small"
+        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
     }
 };
 
