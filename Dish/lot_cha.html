@@ -3,77 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Braised Pork with Eggs</title>
+    <title>Lot Cha</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
     </style>
 </head>
+
 <body>
     <script src="shop.js"></script>
+
     <main>
         <section class="intro">
             <section class="description">
-                <h1>Braised Pork with Eggs</h1>
-                <h2>ខសាច់ជ្រូកពង</h2>
-                <p>This dish is made by slowly cooking pork belly and boiled eggs in a caramel sauce using sugar, fish sauce, and coconut water. It has a rich, sweet and savory flavor with tender meat and a dark glossy sauce.</p>
-                <p id="calories">Calories <br> 1300 kcal (430 kcal per serving)</p>
+                <h1>Lot Cha</h1>
+                <h2>ឡូតឆា</h2>
+                <p>Lot Cha is a popular Cambodian street food made with short rice noodles stir-fried with vegetables, egg, and savory sauce. It has a smoky flavor and is often served with fresh herbs and lime.</p>
+                <p id="calories">Calories <br> 900 kcal (300 kcal per serving)</p>
             </section>
-            <img class="imga" src="../images/braised_pork_eggs.jpg" alt="Braised Pork with Eggs" width="300">
+
+            <img class="imga" src="../images/lot_cha.jpg" alt="Lot Cha noodles" width="300">
         </section>
 
         <section class="ingredients">
 
             <section class="ingredient">
-                <p>Pork Belly</p>
-                <img src="../images/pork.jpg" alt="pork">
+                <p>Lot Cha Noodles</p>
+                <img src="../images/lot_noodles.jpg" alt="lot cha noodles">
                 <p>400g</p>
-                <a href="#" onclick="openModal('pork_belly') ; return false">Buy Now</a>
+                <a href="#" onclick="openModal('noodles'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cabbage</p>
+                <img src="../images/cabbage.webp" alt="cabbage">
+                <p>1 head</p>
+                <a href="#" onclick="openModal('cabbage'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Beef</p>
+                <img src="../images/beef.webp" alt="beef">
+                <p>200g</p>
+                <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
             </section>
 
             <section class="ingredient">
                 <p>Eggs</p>
                 <img src="../images/eggs.jpg" alt="eggs">
-                <p>4 eggs</p>
-                <a href="#" onclick="openModal('eggs') ; return false">Buy Now</a>
+                <p>2</p>
+                <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Bean Sprouts</p>
+                <img src="../images/bean_sprouts.jpg" alt="bean sprouts">
+                <p>150g</p>
+                <a href="#" onclick="openModal('bean_sprouts'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Chinese Chives</p>
+                <img src="../images/chives.jpg" alt="chinese chives">
+                <p>100g</p>
+                <a href="#" onclick="openModal('chives'); return false">Buy Now</a>
             </section>
 
             <section class="ingredient">
                 <p>Garlic</p>
                 <img src="../images/garlic.jpg" alt="garlic">
                 <p>4 cloves</p>
-                <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
+                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Soy Sauce</p>
+                <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Oyster Sauce</p>
+                <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Fish Sauce</p>
+                <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
             </section>
 
             <section class="ingredient">
                 <p>Sugar</p>
                 <img src="../images/sugar.jpg" alt="sugar">
+                <p>1 tsp</p>
+                <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cooking Oil</p>
+                <img src="../images/oil.jpg" alt="cooking oil">
                 <p>2 tbsp</p>
-                <a href="#" onclick="openModal('palm_sugar') ; return false">Buy Now</a>
+                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
             </section>
 
             <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish_sauce">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/pepper.jpg" alt="pepper">
-                <p>½ tsp</p>
-                <a href="#" onclick="openModal('blacl_pepper') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Coconut Water</p>
-                <img src="../images/coconut.jpg" alt="coconut">
-                <p>1½ cups (350ml)</p>
-                <a href="#" onclick="openModal('coconut_water') ; return false">Buy Now</a>
+                <p>Chili Sauce</p>
+                <img src="../images/chili_sauce.webp" alt="chili sauce">
+                <p>1 (for serving)</p>
+                <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
             </section>
 
         </section>
@@ -82,67 +127,71 @@
             <ol>
 
                 <li>
-                    <h4>Step1: Prepare the eggs</h4>
+                    <h4>Step 1: Prepare ingredients</h4>
                     <ul>
-                        <li>Boil eggs until fully cooked</li>
-                        <li>Peel and set aside</li>
+                        <li>Wash bean sprouts, cabbage and chives</li>
+                        <li>Chop garlic and cut vegetables into bite-sized pieces</li>
+                        <li>Set everything ready</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 2: Make caramel</h4>
+                    <h4>Step 2: Cook pork</h4>
                     <ul>
-                        <li>Heat sugar in a pot</li>
-                        <li>Cook until golden brown</li>
+                        <li>Heat oil in a pan</li>
+                        <li>Add garlic and stir until fragrant</li>
+                        <li>Add beef and cook until done</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 3: Cook pork</h4>
+                    <h4>Step 3: Add noodles</h4>
                     <ul>
-                        <li>Add pork belly and garlic</li>
-                        <li>Stir until slightly browned</li>
+                        <li>Add Lot Cha noodles</li>
+                        <li>Stir fry on high heat</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 4: Add seasoning</h4>
+                    <h4>Step 4: Season</h4>
                     <ul>
-                        <li>Add fish sauce and pepper</li>
+                        <li>Add soy sauce, oyster sauce, fish sauce and sugar</li>
                         <li>Mix well</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 5: Add liquid</h4>
+                    <h4>Step 5: Add vegetables</h4>
                     <ul>
-                        <li>Pour coconut water</li>
-                        <li>Bring to a boil</li>
+                        <li>Add bean sprouts, cabbage and chives</li>
+                        <li>Stir quickly</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 6: Simmer</h4>
+                    <h4>Step 6: Add egg</h4>
                     <ul>
-                        <li>Add boiled eggs</li>
-                        <li>Cook for 30–40 minutes</li>
-                        <li>Let sauce reduce and thicken</li>
+                        <li>Push noodles to one side</li>
+                        <li>Crack eggs and scramble</li>
+                        <li>Mix everything together</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 7: Serve</h4>
+                    <h4>Step 7: Finish</h4>
                     <ul>
-                        <li>Serve hot with rice</li>
+                        <li>Add egg on the top</li>
+                        <li>Serve hot with chili sauce</li>
                     </ul>
                 </li>
 
             </ol>
         </section>
+
     </main>
 
     <footer>
-       <a href="https://youtu.be/oUNmt0UPq_Q?si=xxg1P2m-GWqrABLg">Here is the link to a tutorial youtube video </a>
+    <a href="https://youtu.be/g1eS9MH7q-g?si=jO2G7d1D_sVniZF3">Here is the link to a tutorial youtube video</a>
     </footer>
 
     <div id="shopModal" class="modal">
@@ -157,5 +206,6 @@
             <button onclick="closeModal()">Cancel</button>
         </div>
     </div>
+
 </body>
 </html>
