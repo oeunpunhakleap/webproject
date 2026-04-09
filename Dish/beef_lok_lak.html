@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef Lok Lak</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+<script src="shop.js"></script>
+
+<main>
+    <section class="intro">
+
+        <section class="description">
+            <h1>Beef Lok Lak</h1>
+            <h2>ឡុកឡាក់សាច់គោ</h2>
+            <p>Beef Lok Lak is a famous Cambodian dish made with marinated beef stir-fried at high heat and served on a bed of fresh vegetables. It is known for its rich, savory flavor and is traditionally paired with a lime and black pepper dipping sauce, rice, and a fried egg.</p>
+            <p id="calories">Calories <br> 800 kcal per serving</p>
+        </section>
+
+        <img src="../images/lok_lak.jpg" alt="Beef Lok Lak" width="300">
+
+    </section>
+
+    <section class="ingredients">
+
+        <section class="ingredient">
+            <p>Beef (Sirloin or Tenderloin)</p>
+            <img src="../images/beef.webp" alt="beef">
+            <p>300g</p>
+            <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Garlic</p>
+            <img src="../images/garlic.jpg" alt="garlic">
+            <p>4 cloves</p>
+            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Soy Sauce</p>
+            <img src="../images/soy_sauce.jpg" alt="soy sauce">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Oyster Sauce</p>
+            <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fish Sauce</p>
+            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+            <p>1 tsp</p>
+            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Sugar</p>
+            <img src="../images/sugar.jpg" alt="sugar">
+            <p>1 tsp</p>
+            <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Black Pepper</p>
+            <img src="../images/pepper.jpg" alt="pepper">
+            <p>1 tsp</p>
+            <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Lettuce</p>
+            <img src="../images/lettuce.webp" alt="lettuce">
+            <p>For serving</p>
+            <a href="#" onclick="openModal('lettuce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Cucumber</p>
+            <img src="../images/cucumber.jpg" alt="cucumber">
+            <p>For serving</p>
+            <a href="#" onclick="openModal('cucumber'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Tomato</p>
+            <img src="../images/tomato.webp" alt="tomato">
+            <p>For serving</p>
+            <a href="#" onclick="openModal('tomatoes'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Rice</p>
+            <img src="../images/rice.jpg" alt="rice">
+            <p>2 cups</p>
+            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fried Egg (Optional)</p>
+            <img src="../images/eggs.jpg" alt="egg">
+            <p>1 egg</p>
+            <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Lemon(for dipping sauce)</p>
+            <img src="../images/lemon.jpg" alt="lemon">
+            <p>1 piece</p>
+            <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
+        </section>
+
+    </section>
+
+    <section class="recipe">
+        <h2>Recipe</h2>
+
+        <ol>
+
+            <li>
+                <h4>Step 1: Marinate the beef</h4>
+                <ul>
+                    <li>Mix soy sauce, oyster sauce, fish sauce, sugar, garlic, and pepper</li>
+                    <li>Add beef and mix well</li>
+                    <li>Marinate for 30 minutes</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 2: Cook the beef</h4>
+                <ul>
+                    <li>Heat oil in a pan or wok</li>
+                    <li>Add beef and stir-fry on high heat</li>
+                    <li>Cook until browned but still tender</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 3: Prepare vegetables</h4>
+                <ul>
+                    <li>Slice tomato and cucumber</li>
+                    <li>Wash lettuce</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 4: Make dipping sauce</h4>
+                <ul>
+                    <li>Mix lime juice, salt, and black pepper</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 5: Serve</h4>
+                <ul>
+                    <li>Place vegetables on plate</li>
+                    <li>Add beef on top</li>
+                    <li>Serve with rice and dipping sauce</li>
+                    <li>Add fried egg (optional)</li>
+                </ul>
+            </li>
+
+        </ol>
+    </section>
+</main>
+
+<footer>
+   <a href="https://youtu.be/ZVWPFhzL71o?si=3mMP32esezAyrAiH">Here is the link to a tutorial youtube video</a>
+</footer>
+
+<div id="shopModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Select a shop</h3>
+        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+
+        <button onclick="goToShop('aeon')">AEON</button>
+        <button onclick="goToShop('makro')">Makro</button>
+        <button onclick="goToShop('deli')">Deli</button>
+
+        <br><br>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
+

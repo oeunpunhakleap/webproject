@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somlor Proher</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+<script src="shop.js"></script>
+
+<main>
+    <section class="intro">
+
+        <section class="description">
+            <h1>Somlor Proher</h1>
+            <h2>សម្លប្រហើរ</h2>
+            <p>Somlor Proher is a traditional Cambodian soup made with fish, fresh vegetables, and aromatic kroeung (lemongrass paste). It is a healthy and flavorful dish commonly enjoyed in rural areas, combining natural ingredients like pumpkin, taro, and herbs in a light, savory broth.</p>
+            <p id="calories">Calories <br> 500 kcal per serving</p>
+        </section>
+
+        <img src="../images/somlor_proher.jpg" alt="Somlor Proher" width="300">
+
+    </section>
+
+    <section class="ingredients">
+
+        <section class="ingredient">
+            <p>Fish (Snakehead or Catfish)</p>
+            <img src="../images/snakehead.png" alt="fish">
+            <p>300g</p>
+            <a href="#" onclick="openModal('catfish'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Kroeung (Lemongrass Paste)</p>
+            <img src="../images/krerng_bok.jpg" alt="kroeung">
+            <p>3 tbsp</p>
+            <a href="#" onclick="openModal('kroeung'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Pumpkin</p>
+            <img src="../images/pumkin.webp" alt="pumpkin">
+            <p>150g</p>
+            <a href="#" onclick="openModal('pumpkin'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Luffa Gourd / Winter Melon</p>
+            <img src="../images/luffa.jpg" alt="luffa">
+            <p>100g</p>
+            <a href="#" onclick="openModal('luffa_gourd'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Ivy Gourd leaves</p>
+            <img src="../images/slerkbas.jpg" alt="slerkbas">
+            <p>100g</p>
+            <a href="#" onclick="openModal('slerkbas'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Taro</p>
+            <img src="../images/taro.jpg" alt="taro">
+            <p>100g</p>
+            <a href="#" onclick="openModal('taro'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Mushrooms</p>
+            <img src="../images/mushroom.webp" alt="mushroom">
+            <p>100g</p>
+            <a href="#" onclick="openModal('straw_mushroom'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fish Sauce</p>
+            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Sugar</p>
+            <img src="../images/sugar.jpg" alt="sugar">
+            <p>1 tsp</p>
+            <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Prahok</p>
+            <img src="../images/brohok.jpeg" alt="prahok fermented fish">
+            <p>1–2 tbsp</p>
+            <a href="#" onclick="openModal('prahok'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Bonlea P'em</p>
+            <img src="../images/bonlea_sweet.jpg" alt="bonlea_sweet">
+            <p>150g</p>
+            <a href="#" onclick="openModal('bonlea_sweet'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fresh Herbs (Basil or Moringa Leaves)</p>
+            <img src="../images/herbs.jpg" alt="herbs">
+            <p>1 handful</p>
+            <a href="#" onclick="openModal('herbs_neang_vong'); return false">Buy Now</a>
+        </section>
+
+    </section>
+
+    <section class="recipe">
+        <h2>Recipe</h2>
+
+        <ol>
+
+            <li>
+                <h4>Step 1: Prepare ingredients</h4>
+                <ul>
+                    <li>Cut fish into pieces</li>
+                    <li>Slice all vegetables</li>
+                    <li>Prepare kroeung paste</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 2: Cook kroeung</h4>
+                <ul>
+                    <li>Heat a pot with a little oil</li>
+                    <li>Add kroeung and prahok and stir until fragrant</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 3: Add fish and water</h4>
+                <ul>
+                    <li>Add fish into the pot</li>
+                    <li>Add water</li>
+                    <li>Bring to a boil</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 4: Add vegetables</h4>
+                <ul>
+                    <li>Add pumpkin, taro, slerk bas, mushrooms, bonlea p'em and luffa gourd</li>
+                    <li>Cook until soft</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 5: Season</h4>
+                <ul>
+                    <li>Add fish sauce and sugar</li>
+                    <li>Simmer for 15–20 minutes</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 6: Finish</h4>
+                <ul>
+                    <li>Add herbs and Ivy Gourd leaves</li>
+                    <li>Taste and adjust seasoning</li>
+                    <li>Serve hot with rice</li>
+                </ul>
+            </li>
+
+        </ol>
+    </section>
+</main>
+
+<footer>
+   <a href="https://youtu.be/XdXz3kghTwM?si=HOONj9kljitn3EA6">Here is the link to a tutorial youtube video</a>
+</footer>
+
+<div id="shopModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Select a shop</h3>
+        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+
+        <button onclick="goToShop('aeon')">AEON</button>
+        <button onclick="goToShop('makro')">Makro</button>
+        <button onclick="goToShop('deli')">Deli</button>
+
+        <br><br>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
+

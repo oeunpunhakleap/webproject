@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet and Sour Pork Ribs</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+    <script src="shop.js"></script>
+
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Sweet and Sour Pork Ribs</h1>
+                <h2>ឆាឆ្អឹងជំនីជូអែម</h2>
+                <p>This Cambodian dish features crispy pork ribs stir-fried in a flavorful sweet and sour sauce made with garlic, ketchup, fish sauce, and sugar. It is balanced, tangy, and delicious.</p>
+                <p id="calories">Calories <br> 1200 kcal (400 kcal per serving)</p>
+            </section>
+
+            <img class="imga" src="../images/stir_pork_ribs.jpg" alt="Sweet and sour pork ribs" width="300">
+        </section>
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Pork Ribs</p>
+                <img src="../images/pork_ribs.webp" alt="pork ribs">
+                <p>500g</p>
+                <a href="#" onclick="openModal('pork_ribs'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Garlic</p>
+                <img src="../images/garlic.jpg" alt="garlic">
+                <p>4 cloves</p>
+                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cripy Fried Powder</p>
+                <img src="../images/crispy_fried_powder.png" alt="crispy fried powder">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('crispy_fried_powder'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Egg</p>
+                <img src="../images/eggs.jpg" alt="egg">
+                <p>1</p>
+                <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Onion</p>
+                <img src="../images/onion.jpg" alt="onion">
+                <p>1 medium</p>
+                <a href="#" onclick="openModal('onion'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Bell Pepper</p>
+                <img src="../images/green_bell_pepper.jpg" alt="green bell pepper">
+                <p>1</p>
+                <a href="#" onclick="openModal('green_bell_pepper'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Tomato</p>
+                <img src="../images/tomato.webp" alt="tomato">
+                <p>1</p>
+                <a href="#" onclick="openModal('tomatoes'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Pineapple</p>
+                <img src="../images/pineapple.webp" alt="pineapple">
+                <p>1 cup</p>
+                <a href="#" onclick="openModal('pineapple'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Ketchup</p>
+                <img src="../images/chili_sauce.webp" alt="cili sauce">
+                <p>3 tbsp</p>
+                <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Fish Sauce</p>
+                <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Oyster Sauce</p>
+                <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Soy Sauce</p>
+                <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Sugar</p>
+                <img src="../images/sugar.jpg" alt="sugar">
+                <p>2 tbsp</p>
+                <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Black Pepper</p>
+                <img src="../images/pepper.jpg" alt="black pepper">
+                <p>1/2 tsp</p>
+                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cooking Oil</p>
+                <img src="../images/oil.jpg" alt="cooking oil">
+                <p>3 tbsp</p>
+                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+            </section>
+
+        </section>
+
+        <section class="recipe">
+            <ol>
+
+                <li>
+                    <h4>Step 1: Prepare ribs</h4>
+                    <ul>
+                        <li>Cut pork ribs into small pieces</li>
+                        <li>Wash and drain well</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Marinate</h4>
+                    <ul>
+                        <li>Mix ribs with soy sauce, fish sauce, oyster sauce, pepper, and a little sugar</li>
+                        <li>Add eggs, crispy fried powder and mix well</li>
+                        <li>Marinate for 15–20 minutes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Fry ribs</h4>
+                    <ul>
+                        <li>Heat oil in a pan</li>
+                        <li>Fry ribs until golden brown</li>
+                        <li>Remove and set aside</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Make sauce</h4>
+                    <ul>
+                        <li>Add garlic and cook until fragrant</li>
+                        <li>Add chili sauce, fish sauce, sugar, oyster sauce and a little water</li>
+                        <li>Stir until slightly thick</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Add vegetables</h4>
+                    <ul>
+                        <li>Add onion, greenbell pepper, tomato and pineapple</li>
+                        <li>Stir fry briefly</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Combine</h4>
+                    <ul>
+                        <li>Add ribs back into the pan</li>
+                        <li>Mix well with sauce</li>
+                        <li>Cook 2–3 minutes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 7: Serve</h4>
+                    <ul>
+                        <li>Serve hot with rice</li>
+                    </ul>
+                </li>
+
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+    <a href="https://youtu.be/GSIce4m3Wyg?si=UbPaQPm1qOpV8QZX">Here is the link to a tutorial youtube video</a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>
+

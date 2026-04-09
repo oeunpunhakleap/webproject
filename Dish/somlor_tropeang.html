@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somlor Tropeang</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+<script src="shop.js"></script>
+
+<main>
+    <section class="intro">
+        <section class="description">
+            <h1>Somlor Tropeang</h1>
+            <h2>សម្លត្រពាំង</h2>
+            <p>Somlor Tropeang is a traditional Cambodian soup made with baby bamboo shoots, fish, coconut milk, and prahok. It has a rich, slightly creamy taste with a unique aroma from fermented fish and herbs.</p>
+            <p id="calories">Calories <br> 850 kcal (280 kcal per serving)</p>
+        </section>
+
+        <img class="imga" src="../images/somlor_tropeang.jpg" alt="Somlor Tropeang soup" width="300">
+    </section>
+
+    <section class="ingredients">
+
+        <section class="ingredient">
+            <p>Baby Bamboo Shoots</p>
+            <img src="../images/bamboo.jpg" alt="baby bamboo shoots">
+            <p>300g</p>
+            <a href="#" onclick="openModal('bamboo'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Luffa</p>
+            <img src="../images/luffa.jpg" alt="luffa">
+            <p>300g</p>
+            <a href="#" onclick="openModal('luffa'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fish</p>
+            <img src="../images/fish_por.jpg" alt="fresh fish">
+            <p>300g</p>
+            <a href="#" onclick="openModal('fish'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Coconut Milk</p>
+            <img src="../images/coconut_milk.jpg" alt="coconut milk">
+            <p>1 cup</p>
+            <a href="#" onclick="openModal('coconut_milk'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Lemongrass</p>
+            <img src="../images/lemon_grass.jpg" alt="lemongrass">
+            <p>2 stalks</p>
+            <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Galangal</p>
+            <img src="../images/galangal.webp" alt="galangal">
+            <p>2–3 slices</p>
+            <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Bonlea P'em</p>
+            <img src="../images/bonlea_sweet.jpg" alt="bonlea_sweet">
+            <p>150g</p>
+            <a href="#" onclick="openModal('bonlea_sweet'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Slerk Bas</p>
+            <img src="../images/slerkbas.jpg" alt="slerkbas">
+            <p>200g</p>
+            <a href="#" onclick="openModal('slerkbas'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Garlic</p>
+            <img src="../images/garlic.jpg" alt="garlic cloves">
+            <p>4 cloves</p>
+            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Prahok</p>
+            <img src="../images/brohok.jpeg" alt="prahok fermented fish">
+            <p>1–2 tbsp</p>
+            <a href="#" onclick="openModal('prahok'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Rice</p>
+            <img src="../images/ricee.jpg" alt="raw rice grains">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Sugar</p>
+            <img src="../images/sugar.jpg" alt="sugar">
+            <p>1 tsp</p>
+            <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Fish Sauce</p>
+            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+            <p>1 tbsp</p>
+            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p>Chili Leaves</p>
+            <img src="../images/chili_leaves.webp" alt="chili leaves">
+            <p>Optional</p>
+            <a href="#" onclick="openModal('chili_leaves'); return false">Buy Now</a>
+        </section>
+
+        <section class="ingredient">
+            <p> Red Chili</p>
+            <img src="../images/red_chili.webp" alt="red chili">
+            <p>Optional</p>
+            <a href="#" onclick="openModal('red_chili'); return false">Buy Now</a>
+        </section>
+
+    </section>
+
+    <section class="recipe">
+        <ol>
+            <li>
+                <h4>Step 1: Prepare bamboo</h4>
+                <ul>
+                    <li>Boil bamboo shoots to remove bitterness</li>
+                    <li>Drain and set aside</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 2: Cook rice base</h4>
+                <ul>
+                    <li>Boil water in a pot</li>
+                    <li>Add rice and cook until soft</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 3: Add spices</h4>
+                <ul>
+                    <li>Add lemongrass, galangal, garlic, and prahok</li>
+                    <li>Stir well</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 4: Add coconut milk</h4>
+                <ul>
+                    <li>Pour coconut milk into the pot</li>
+                    <li>Mix gently</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 5: Add bamboo</h4>
+                <ul>
+                    <li>Add bamboo shoots</li>
+                    <li>Cook until tender</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 6: Add fish</h4>
+                <ul>
+                    <li>Add fish pieces</li>
+                    <li>Add luffa</li>
+                    <li>Cook for 5–7 minutes</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 7: Season</h4>
+                <ul>
+                    <li>Add sugar and fish sauce</li>
+                    <li>Taste and adjust</li>
+                </ul>
+            </li>
+
+            <li>
+                <h4>Step 8: Finish</h4>
+                <ul>
+                    <li>Add Slerk Bas, Bonlea P'em and Chili leaves or chili (optional)</li>
+                    <li>Serve hot with rice</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+</main>
+
+<footer>
+   <a href="https://youtu.be/Z5SoJFc9MSU?si=L8a0xdaIu1ZrF83i">Here is the link to a tutorial youtube video</a>
+</footer>
+
+<div id="shopModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Select a shop</h3>
+        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+        <button onclick="goToShop('aeon')">AEON</button>
+        <button onclick="goToShop('makro')">Makro</button>
+        <button onclick="goToShop('deli')">Deli</button>
+
+        <br><br>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
