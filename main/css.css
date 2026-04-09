@@ -225,3 +225,65 @@ nav {
     border: 0px;
     background-color: rgb(103, 53, 3);
 }
+
+
+/* this is for search */
+.search-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+}
+
+#searchInput {
+  width: 150px; 
+  padding: 8px 30px 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-box i {
+  position: absolute;
+  right: 15px;
+  pointer-events: none;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  z-index: 1000;
+}
+
+.result-item {
+  display: block;            
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+
+  border-bottom: none;     
+}
+
+
+.result-item:hover {
+  background-color: antiquewhite;
+}
+
+#results a:last-child {
+  border-bottom: none;
+}
+
