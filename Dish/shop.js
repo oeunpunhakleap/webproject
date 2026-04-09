@@ -185,9 +185,7 @@ const links = {
         noni_leaves: "",
         red_chili: "https://delishop.asia/product/red-chilli-pepper-small",
         coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
-<<<<<<< HEAD
         coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
-=======
         chicken: "https://delishop.asia/product/chicken-small",
         potatoes: "https://delishop.asia/product/potato-1kg-delishop-fresh",
         carrots: "https://delishop.asia/product/carrot-big",
@@ -261,7 +259,6 @@ const links = {
         dried_stingray:"",
         napa_cabbage:"https://delishop.asia/product/chinese-cabbage-nappa",
         shiitake_mushrooms:"https://delishop.asia/product/black-mushroom-shiitake",
->>>>>>> ed19b12106f8d343e684fecc2ed077623d3d0cbe
     }
 };
 
