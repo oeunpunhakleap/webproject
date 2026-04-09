@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minced Pork Napa Cabbage Soup</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+    <script src="shop.js"></script>
+
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Minced Pork Napa Cabbage Soup</h1>
+                <h2>ស៊ុបស្ពៃបូកគោ</h2>
+                <p>This Khmer soup is made with minced pork and napa cabbage simmered in a light, flavorful broth. It is simple, comforting, and perfect for everyday meals.</p>
+                <p id="calories">Calories <br> 600 kcal (200 kcal per serving)</p>
+            </section>
+
+            <img class="imga" src="../images/napa_soup.jpg" alt="Minced pork napa cabbage soup" width="300">
+        </section>
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Minced Pork</p>
+                <img src="../images/minced_pork.jpg" alt="minced pork">
+                <p>300g</p>
+                <a href="#" onclick="openModal('minced_pork'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Napa Cabbage</p>
+                <img src="../images/napa_cabbage.jpg" alt="napa cabbage">
+                <p>1 small head</p>
+                <a href="#" onclick="openModal('napa_cabbage'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Carrot</p>
+                <img src="../images/carrot.webp" alt="carrot">
+                <p>1 small</p>
+                <a href="#" onclick="openModal('carrots'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Raddis</p>
+                <img src="../images/radish.jpg" alt="raddis">
+                <p>1 small</p>
+                <a href="#" onclick="openModal('radish'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Shiitake Mushrooms</p>
+                <img src="../images/shiitake_mushroom.png" alt="shiitake mushrooms">
+                <p>100g</p>
+                <a href="#" onclick="openModal('shiitake_mushrooms'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Dried Shrimp</p>
+                <img src="../images/dried_shrimp.jpeg" alt="dried shrimp">
+                <p>4-5 pieces</p>
+                <a href="#" onclick="openModal('dried_shrimp'); return false">Buy Now</a>
+            </section>
+
+             <section class="ingredient">
+                <p>Dried Stingray</p>
+                <img src="../images/dried_stingray.jpg" alt="dried stingray">
+                <p>1-2 pieces</p>
+                <a href="#" onclick="openModal('dried_stingray'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Garlic</p>
+                <img src="../images/garlic.jpg" alt="garlic">
+                <p>3 cloves</p>
+                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Green Onion</p>
+                <img src="../images/spring_onion.jpg" alt="green onion">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Fish Sauce</p>
+                <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Black Pepper</p>
+                <img src="../images/pepper.jpg" alt="pepper">
+                <p>½ tsp</p>
+                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Water</p>
+                <img src="../images/water.png" alt="water">
+                <p>1 liter</p>
+                <a href="#" onclick="openModal('water'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Green Onion</p>
+                <img src="../images/green_onions.jpg" alt="green onion">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('green_onions'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Cooking Oil</p>
+                <img src="../images/oil.jpg" alt="cooking oil">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+            </section>
+
+        </section>
+
+        <section class="recipe">
+            <ol>
+                <li>
+                    <h4>Step 1: Prepare ingredients</h4>
+                    <ul>
+                        <li>Wash and cut napa cabbage into pieces</li>
+                        <li>Slice carrot and radish into small pieces</li>
+                        <li>Cut shiitake mushrooms</li>
+                        <li>Chop garlic, shallots, and green onions</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Stir-fry base</h4>
+                    <ul>
+                        <li>Heat cooking oil in a pot</li>
+                        <li>Add garlic, dried shrimp, dried stingray and stir until fragrant</li>
+                        <li>Add shiitake mushrooms and stir-fry first</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Add water</h4>
+                    <ul>
+                        <li>Pour in water</li>
+                        <li>Bring to a boil</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Add minced pork</h4>
+                    <ul>
+                        <li>Add minced pork into the boiling soup</li>
+                        <li>Stir gently to separate the meat</li>
+                        <li>Cook until pork is fully done</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Add vegetables</h4>
+                    <ul>
+                        <li>Add napa cabbage, carrot, and radish</li>
+                        <li>Cook until vegetables are tender</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Finish and serve</h4>
+                    <ul>
+                        <li>Add fish sauce and black pepper to taste</li>
+                        <li>Add green onions</li>
+                        <li>Serve hot with rice</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+    <a href="https://youtu.be/NHhDeh982oE?si=x_gE7d6R8az7tfZp">Here is the link to a tutorial youtube video </a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>

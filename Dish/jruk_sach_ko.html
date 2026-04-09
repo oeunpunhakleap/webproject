@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sngor Sach Ko</title>
+    <link rel="stylesheet" href="recipe_template.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+    </style>
+</head>
+
+<body>
+    <script src="shop.js"></script>
+
+    <main>
+        <section class="intro">
+            <section class="description">
+                <h1>Beef Soup with Lemongrass & Lime</h1>
+                <h2>ស្ងោរសាច់គោ</h2>
+                <p>This Cambodian soup is light, aromatic, and refreshing. It uses lemongrass, garlic, and lime to create a sour and savory broth, combined with tender beef and fresh herbs.</p>
+                <p id="calories">Calories <br> 600 kcal (200 kcal per serving)</p>
+            </section>
+
+            <img class="imga" src="../images/beef_soup.jpg" alt="beef soup with lemongrass and lime" width="300">
+        </section>
+
+        <section class="ingredients">
+
+            <section class="ingredient">
+                <p>Beef</p>
+                <img src="../images/beef.webp" alt="beef">
+                <p>300g</p>
+                <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Lemongrass</p>
+                <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Garlic</p>
+                <img src="../images/garlic.jpg" alt="garlic">
+                <p>3 cloves</p>
+                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Galangal</p>
+                <img src="../images/galangal.webp" alt="galangal">
+                <p>1 small piece</p>
+                <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Lime</p>
+                <img src="../images/lime.avif" alt="lime">
+                <p>1–2</p>
+                <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Spring Onion</p>
+                <img src="../images/spring_onion.jpg" alt="spring onion">
+                <p>2 stalks</p>
+                <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Chili</p>
+                <img src="../images/red_chili.webp" alt="chili">
+                <p>1–2 (optional)</p>
+                <a href="#" onclick="openModal('chili'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Herb</p>
+                <img src="../images/herbs.jpg" alt="herb">
+                <p>100g (optional)</p>
+                <a href="#" onclick="openModal('herbs_neang_vong'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Fish Sauce</p>
+                <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                <p>1 tbsp</p>
+                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Sugar</p>
+                <img src="../images/sugar.jpg" alt="sugar">
+                <p>1 tsp</p>
+                <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+            </section>
+
+            <section class="ingredient">
+                <p>Water</p>
+                <img src="../images/water.png" alt="water">
+                <p>1 liter</p>
+                <a href="#" onclick="openModal('water'); return false">Buy Now</a>
+            </section>
+
+        </section>
+
+        <section class="recipe">
+            <ol>
+                <li>
+                    <h4>Step 1: Prepare ingredients</h4>
+                    <ul>
+                        <li>Slice beef thinly</li>
+                        <li>Chop spring onion and herbs</li>
+                        <li>Crush garlic, lemongrass, and galangal</li>
+                        <li>Cut lime and chili</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 2: Boil water with spices</h4>
+                    <ul>
+                        <li>Bring water to a boil</li>
+                        <li>Add lemongrass, garlic, and galangal</li>
+                        <li>Let it boil to release aroma</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Add beef</h4>
+                    <ul>
+                        <li>Add sliced beef into boiling water</li>
+                        <li>Cook until just done</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Season</h4>
+                    <ul>
+                        <li>Add fish sauce and sugar</li>
+                        <li>Add chili if desired</li>
+                        <li>Squeeze lime juice</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Finish</h4>
+                    <ul>
+                        <li>Add spring onion</li>
+                        <li>Turn off heat</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Serve</h4>
+                    <ul>
+                        <li>Serve hot with rice</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+    <a href="https://youtu.be/BtwcadAs7b8">Here is the link to a tutorial youtube video</a>
+    </footer>
+
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
+
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>
