@@ -252,7 +252,7 @@ img {
 /* ================= RESPONSIVE NAV ================= */
 @media (max-width: 900px) {
     .menu-toggle { display: flex; }
-
+    
     .nav-right-group {
         position: absolute;
         top: 60px;
