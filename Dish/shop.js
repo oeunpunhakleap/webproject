@@ -185,6 +185,7 @@ const links = {
         noni_leaves: "",
         red_chili: "https://delishop.asia/product/red-chilli-pepper-small",
         coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
+        coconut_cream: "https://delishop.asia/product/red-chilli-pepper-small",
         chicken: "https://delishop.asia/product/chicken-small",
         potatoes: "https://delishop.asia/product/potato-1kg-delishop-fresh",
         carrots: "https://delishop.asia/product/carrot-big",

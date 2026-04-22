@@ -1,40 +1,135 @@
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: "Roboto";
-  }
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
 
-h2{
-  font-family: "Bokor";
+:root {
+    --primary: #8c0e0e; 
+    --accent: #f8f1e7;
+    --text: #333;
+    /* set color code tuk prer lerk kroy */
 }
 
-#calories{
-  font-family: "Bahiana";
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    margin: 0;
 }
-
-/* everything before the ingredients */
-
-.intro {
+.navbar {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(250, 235, 215, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.description{
+.container {
+   margin-top: 0px;
+}
+
+.nav-right-group {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
-.intro img{
-  justify-content: flex-end;
-  border-radius: 12px;
+.JN {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 0;
+  font-family: 'Quintessential', cursive;
 }
 
-#calories{
-  text-align: center;
-  font-size: 2em;
-  padding: 10px;
-  width: fit-content;
-  margin-top: 10px;
-  align-self: center;
+.nav-bar {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-bar:hover { color: var(--primary); }
+
+/* Mobile Toggle*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* =============================== Header Styling =========== */
+.recipe-header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    background: var(--accent);
+    padding-top: 80px;
+    border-radius: 24px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.header-content { 
+    flex: 1;
+    padding: 50px;
+    border-radius: 10px; 
+}
+.category { 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 12px; 
+    color: var(--primary); 
+    font-weight: bold; 
+}
+h1 { 
+  font-size: 3.5rem; 
+  margin: 10px 0; 
+  font-family: 'Quintessential', cursive; }
+
+.khmer-title { 
+  font-family: 'Bokor'; 
+  color: #666; 
+  margin-bottom: 20px; }
+
+.info-bar { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 25px;
+   }
+
+.info-chip { 
+    background: var(--primary);
+    color: white; 
+    padding: 8px 16px; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    font-size: 0.9rem;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.1);
+    
+}
+
+.header-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 /* ingredients */
@@ -73,25 +168,116 @@ h2{
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-  .ingredient {
-    flex: 0 0 30%;
-  }
+/* ================= Responsive Adjustments ================= */
+
+/*TABLET VIEW*/
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .recipe-header {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .header-image img {
+        width: 100%; 
+        max-width: 500px;
+        height: auto;
+    }
+
+    .info-bar {
+        justify-content: center; 
+    }
+
+    .ingredient {
+        flex: 0 0 33%; 
+    }
+
+    .recipe ol {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      background-color: #ffffff;
+    }
+
 }
 
-.ingredients {
-  scroll-behavior: smooth;
+/* 2. MOBILE VIEW  */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem; 
+    }
+
+    .recipe-header {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    
+    .info-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .info-chip {
+        flex: 1 1 100%; 
+        font-size: 0.8rem;
+    }
+
+    .ingredient {
+        flex: 0 0 60%; 
+    }
+
+    .recipe ol {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      
+    }
+
+    .recipe ol li {
+        padding: 15px;
+        background: #fdfdfd;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
 }
 
-.ingredients::-webkit-scrollbar {
-  display: none;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* recipe */
+/* ================= RESPONSIVE NAV ================= */
+@media (max-width: 900px) {
+    .menu-toggle { display: flex; }
 
+    .nav-right-group {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        display: none; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-right-group.active {
+        display: flex; 
+    }
+
+    .search-box { width: 80%; }
+}
+
+/* =============================================RECIPEEE======================= */
 .recipe ol{ 
   list-style: none; 
-  padding-left: 0;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .recipe li h4{
   color: rgb(140, 14, 14);
@@ -100,10 +286,6 @@ h2{
   text-align: center;
   color: rgb(140, 14, 14);
 }
-
-
-
-
 
 footer{
   text-align: center;
@@ -152,4 +334,64 @@ footer a{
     margin: 5px;
     padding: 8px 12px;
     cursor: pointer;
+}
+
+/* this is for search */
+.search-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+}
+
+#searchInput {
+  width: 150px; 
+  padding: 8px 30px 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-box i {
+  position: absolute;
+  right: 15px;
+  pointer-events: none;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  z-index: 1000;
+}
+
+.result-item {
+  display: block;            
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+
+  border-bottom: none;     
+}
+
+
+.result-item:hover {
+  background-color: antiquewhite;
+}
+
+#results a:last-child {
+  border-bottom: none;
 }

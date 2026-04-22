@@ -6,27 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fish Amok</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Fish Amok</h1>
-                <h2>អាម៉ុកត្រី</h2>
-                <p>Amok is a traditional Khmer dish made with fish, coconut milk, and a rich, fragrant curry paste called kroeung. It's gently steamed in banana leaves, giving it a soft, custard-like texture and a slightly sweet, aromatic flavor.</p>
-                <p id="calories">Calories <br> 1362 kcal (340 kcal per serving)</p>
-            </section>
-            <img class="imga" src="../images/ah_mok.jpg" alt="Ah Mok" width="300">
-        </section>
+    <main class="container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Fish Amok</h1>
+                    <h2 class="khmer-title">អាម៉ុកត្រី</h2>
+                    <p class="description">Amok is a fragrant fish curry custard, gently steamed in banana leaves. It is the national dish of Cambodia, known for its soft texture and aromatic kroeung paste.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>45m</span></div>
+                        <div class="info-chip">Calorie <span>340 kcal</span></div>
+                        <div class="info-chip">Rating <span>4.8/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/ah_mok.jpg" alt="Fish Amok">
+                </section>
+            </header>
 
 
         <section class="ingredients">
