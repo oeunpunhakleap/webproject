@@ -1,72 +1,76 @@
-@media (max-width: 600px) {
-    nav {
-        padding: 5px 10px;
-    }
-    .nav-right-group {
-        gap: 8px;
-    }
-  
-    .search {
-        padding: 8px;
-    }
-    .search i {
-        margin: 0;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+
+:root {
+    --primary: #8c0e0e; 
+    --accent: #f8f1e7;
+    --text: #333;
+    /* set color code tuk prer lerk kroy */
 }
+
 html {
   scroll-behavior: smooth;
 }
 body{
     margin: 0%;
 }
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background-color: antiquewhite;
-  padding: 1% 5%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-sizing: border-box;
-  min-height: 60px; 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(250, 235, 215, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.container {
+   margin-top: 0px;
 }
 
 .nav-right-group {
   display: flex;
   align-items: center;
-  gap: clamp(10px, 2vw, 30px); 
+  gap: 25px;
 }
 
 .JN {
-  font-size: clamp(24px, 4vw, 40px); 
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary);
   margin: 0;
-  font-family: serif;
-  white-space: nowrap;
+  font-family: 'Quintessential', cursive;
 }
 
 .nav-bar {
   text-decoration: none;
-  color: #4b2c82;
- 
-  font-size: clamp(12px, 1.5vw, 18px);
-  white-space: nowrap;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.search {
-  border-radius: 25px;
-  border: 1.5px solid red;
-  
-  padding: 4px clamp(8px, 1.2vw, 15px);
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  white-space: nowrap;
-  font-size: clamp(10px, 1.2vw, 14px);
+.nav-bar:hover { color: var(--primary); }
+
+/* Mobile Toggle*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
 }
 
 /* TEXT overlay and IMAGE------------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -326,8 +330,32 @@ nav {
   gap: 24px;
 }
 
+/* ================= RESPONSIVE NAV ================= */
+
 @media (max-width: 600px) {
   .menu-category { width: 90%; }
   .menu-grid { grid-template-columns: 1fr; }
   .menu-page-title { font-size: 26px; }
+}
+@media (max-width: 900px) {
+    .menu-toggle { display: flex; }
+
+    .nav-right-group {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        display: none; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-right-group.active {
+        display: flex; 
+    }
+
+    .search-box { width: 80%; }
 }

@@ -2,29 +2,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel = "stylesheet" href = "css.css">
-  <script src="https://kit.fontawesome.com/7e93bcb076.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "css.css">
+    <script src="https://kit.fontawesome.com/7e93bcb076.js" crossorigin="anonymous"></script>
     <script src="search.js"></script>
+    <script src="nav.js"></script>
 </head>
 <body>
-    <nav class="container">
-        <p class="JN">Jeat Nas</p>
-        <div class="nav-right-group">
-            <a href="#home" class="nav-bar">Home</a>
-            <a href="menu.html" class="nav-bar">Menu</a>
-            <a href="#" class="nav-bar">Home</a>
-            <a href="#food-rec" class="nav-bar">Food Recommendation</a>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search dish..." onkeyup="searchDish()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <div id="results"></div>
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <a href="#aboutus" class="nav-bar">About us</a>
-        </div>
-    </nav>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
 
 <!-- MAIN -->
     <main>
@@ -121,7 +127,7 @@
 
         </section>
 
-        <section id = "aboutus" class = "aboutus">
+        <section id = "about-us" class = "aboutus">
             <h2>About Us</h2>
             <div class="about-us-description">
                 <p>Jeat Nas was created in 2026 with a vision to help you thinking less about which food to cook</p>
