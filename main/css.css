@@ -237,6 +237,8 @@ body{
   display: inline-flex;
   align-items: center;
   width: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 #searchInput {
