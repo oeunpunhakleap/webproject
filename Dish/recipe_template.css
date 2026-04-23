@@ -141,13 +141,43 @@ h1 {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* ingredients */
+/* =============================================================ingredients================================================== */
 
-.ingredients{
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  padding: 10px;
+.section-title {
+  text-align: center;
+  color: var(--accent);
+  font-size: 40px;
+}
+
+.ingredients-section {
+    padding: 40px 0;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ingredients-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    cursor: grab;
+    user-select: none; 
+    -webkit-user-drag: none; 
+    scrollbar-width: none;   /* Hides scrollbar for Firefox */
+}
+
+.ingredients-wrapper:active {
+    cursor: grabbing;
+}
+
+.ingredients-wrapper::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome/Safari */
+    
 }
 
 .ingredient{
@@ -156,6 +186,7 @@ h1 {
   text-align: center;
   background-color: var(--accent);
   border-radius: 15px;
+  
 
 }
 
@@ -178,6 +209,39 @@ h1 {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 5px;
+  pointer-events: none;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.scroll-btn.left { left: -15px; }
+.scroll-btn.right { right: -15px; }
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .ingredient { flex: 0 0 180px; }
 }
 
 /* ================= Responsive Adjustments ================= */
@@ -250,7 +314,6 @@ h1 {
 
     .recipe ol li {
         padding: 15px;
-        background: #fdfdfd;
         border-radius: 12px;
         margin-bottom: 15px;
     }

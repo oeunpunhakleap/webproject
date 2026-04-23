@@ -295,3 +295,57 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
+
+function scrollSlider(direction) {
+    const slider = document.getElementById('ingredientSlider');
+    const scrollAmount = 240; // Card width + gap
+    
+    slider.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+slider.addEventListener('mousedown', () => {
+    isDown = true;
+    slider.style.scrollBehavior = 'auto'; // Turn off smooth scroll for instant dragging
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.style.scrollBehavior = 'smooth'; // Turn it back on for button clicks
+});
+
+
+const slider = document.getElementById('ingredientSlider');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    // Get the initial click position
+    startX = e.pageX - slider.offsetLeft;
+    // Get the current scroll position
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return; // Stop the function from running if mouse isn't clicked
+    e.preventDefault();
+    
+    // Calculate distance moved
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // The '2' is the scroll speed multiplier
+    slider.scrollLeft = scrollLeft - walk;
+});
+
