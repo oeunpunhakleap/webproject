@@ -5,122 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lot Cha</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-    <script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Lot Cha</h1>
-                <h2>ឡូតឆា</h2>
-                <p>Lot Cha is a popular Cambodian street food made with short rice noodles stir-fried with vegetables, egg, and savory sauce. It has a smoky flavor and is often served with fresh herbs and lime.</p>
-                <p id="calories">Calories <br> 900 kcal (300 kcal per serving)</p>
-            </section>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
 
-            <img class="imga" src="../images/lot_cha.jpg" alt="Lot Cha noodles" width="300">
-        </section>
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Lot Cha</h1>
+                    <h2 class="khmer-title">ឡូតឆា</h2>
+                    <p class="description">Lot Cha is a popular Cambodian street food made with short rice noodles stir-fried with vegetables, egg, and savory sauce. It has a smoky flavor and is often served with fresh herbs and lime.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>15m</span></div>
+                        <div class="info-chip">Calories <span>900 kcal (300 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.9/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/lot_cha.jpg" alt="Lot Cha noodles">
+                </section>
+        </header>
 
-        <section class="ingredients">
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
 
-            <section class="ingredient">
-                <p>Lot Cha Noodles</p>
-                <img src="../images/lot_noodles.jpg" alt="lot cha noodles">
-                <p>400g</p>
-                <a href="#" onclick="openModal('noodles'); return false">Buy Now</a>
-            </section>
+                <section class="ingredients-wrapper" id="ingredientSlider">
 
-            <section class="ingredient">
-                <p>Cabbage</p>
-                <img src="../images/cabbage.webp" alt="cabbage">
-                <p>1 head</p>
-                <a href="#" onclick="openModal('cabbage'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Lot Cha Noodles</p>
+                        <img src="../images/lot_noodles.jpg" alt="lot cha noodles">
+                        <p>400g</p>
+                        <a href="#" onclick="openModal('noodles'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Beef</p>
-                <img src="../images/beef.webp" alt="beef">
-                <p>200g</p>
-                <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Cabbage</p>
+                        <img src="../images/cabbage.webp" alt="cabbage">
+                        <p>1 head</p>
+                        <a href="#" onclick="openModal('cabbage'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Eggs</p>
-                <img src="../images/eggs.jpg" alt="eggs">
-                <p>2</p>
-                <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Beef</p>
+                        <img src="../images/beef.webp" alt="beef">
+                        <p>200g</p>
+                        <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Bean Sprouts</p>
-                <img src="../images/bean_sprouts.jpg" alt="bean sprouts">
-                <p>150g</p>
-                <a href="#" onclick="openModal('bean_sprouts'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Eggs</p>
+                        <img src="../images/eggs.jpg" alt="eggs">
+                        <p>2</p>
+                        <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Chinese Chives</p>
-                <img src="../images/chives.jpg" alt="chinese chives">
-                <p>100g</p>
-                <a href="#" onclick="openModal('chives'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Bean Sprouts</p>
+                        <img src="../images/bean_sprouts.jpg" alt="bean sprouts">
+                        <p>150g</p>
+                        <a href="#" onclick="openModal('bean_sprouts'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>4 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Chinese Chives</p>
+                        <img src="../images/chives.jpg" alt="chinese chives">
+                        <p>100g</p>
+                        <a href="#" onclick="openModal('chives'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Soy Sauce</p>
-                <img src="../images/soy_sauce.jpg" alt="soy sauce">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>4 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Oyster Sauce</p>
-                <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Soy Sauce</p>
+                        <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Oyster Sauce</p>
+                        <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Sugar</p>
-                <img src="../images/sugar.jpg" alt="sugar">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Cooking Oil</p>
-                <img src="../images/oil.jpg" alt="cooking oil">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Sugar</p>
+                        <img src="../images/sugar.jpg" alt="sugar">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Chili Sauce</p>
-                <img src="../images/chili_sauce.webp" alt="chili sauce">
-                <p>1 (for serving)</p>
-                <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Cooking Oil</p>
+                        <img src="../images/oil.jpg" alt="cooking oil">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                    </section>
 
+                    <section class="ingredient">
+                        <p>Chili Sauce</p>
+                        <img src="../images/chili_sauce.webp" alt="chili sauce">
+                        <p>1 (for serving)</p>
+                        <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
+                    </section>
+                </section>
         </section>
 
         <section class="recipe">
