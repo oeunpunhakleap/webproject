@@ -6,120 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicken Curry</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Chicken Curry</h1>
-                <h2>ការីមាន់</h2>
-                <p>Khmer Chicken Curry is a rich, aromatic Cambodian dish made with chicken, coconut milk, and a fragrant curry paste. It has a slightly sweet, savory flavor and is typically served with bread or rice noodle.</p>
-                <p id="calories">Calories <br> 2,270 kcal (755 kcal per serving)</p>
+    <main class="container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+         <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Chicken Curry</h1>
+                    <h2 class="khmer-title">ការីមាន់</h2>
+                    <p class="description">Khmer Chicken Curry is a rich, aromatic Cambodian dish made with chicken, coconut milk, and a fragrant curry paste. It has a slightly sweet, savory flavor and is typically served with bread or rice noodle.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>45m</span></div>
+                        <div class="info-chip">Calorie <span>2,270 kcal (755 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.8/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/curry.jpg" alt="Chicken Curry">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class = "section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                    <section class="ingredients-wrapper" id = "ingredientSlider">
+                    
+                        <section class = "ingredient">  
+                            <p>Chicken</p>
+                            <img src="../images/chicken.png" alt="chicken">
+                            <p>500g</p>
+                            <a href="#" onclick="openModal('chicken') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Coconut Milk</p>
+                            <img src="../images/coconut_milk.jpg" alt="coconut_milk">
+                            <p>400ml</p>
+                            <a href="#" onclick="openModal('coconut_milk') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Potatoes</p>
+                            <img src="../images/potatoes.webp" alt="potatoes">
+                            <p>2 medium</p>
+                            <a href="#" onclick="openModal('potatoes') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Carrots</p>
+                            <img src="../images/carrot.webp" alt="carrots">
+                            <p>2 medium</p>
+                            <a href="#" onclick="openModal('carrots') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Lemongrass</p>
+                            <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                            <p>2 stalks</p>
+                            <a href="#" onclick="openModal('lemongrass') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Galangal</p>
+                            <img src="../images/galangal.webp" alt="galangal">
+                            <p>1 inch piece</p>
+                            <a href="#" onclick="openModal('galangal') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Turmeric</p>
+                            <img src="../images/turmeric.webp" alt="turmeric">
+                            <p>1 tsp, fresh or powder</p>
+                            <a href="#" onclick="openModal('turmeric') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Garlic</p>
+                            <img src="../images/garlic.jpg" alt="garlic">
+                            <p>3 cloves</p>
+                            <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Shallots</p>
+                            <img src="../images/shallots.jpg" alt="shallots">
+                            <p>2 medium</p>
+                            <a href="#" onclick="openModal('shallots') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Kaffir Lime Leaves</p>
+                            <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir_lime_leaves">
+                            <p>5 leaves</p>
+                            <a href="#" onclick="openModal('kaffir_lime_leaves') ; return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Red Chili</p>
+                            <img src="../images/red_chili.webp" alt="red_chili">
+                            <p>Optional, 2 pieces</p>
+                            <a href="#" onclick="openModal('red_chili') ; return false">Buy Now</a>
+                        </section>    
             </section>
-            <img src="../images/curry.jpg" alt="Ah Mok" width="300">
         </section>
-
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Chicken</p>
-                <img src="../images/chicken.png" alt="chicken">
-                <p>500g</p>
-                <a href="#" onclick="openModal('chicken') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Coconut Milk</p>
-                <img src="../images/coconut_milk.jpg" alt="coconut_milk">
-                <p>400ml</p>
-                <a href="#" onclick="openModal('coconut_milk') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Potatoes</p>
-                <img src="../images/potatoes.webp" alt="potatoes">
-                <p>2 medium</p>
-                <a href="#" onclick="openModal('potatoes') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Carrots</p>
-                <img src="../images/carrot.webp" alt="carrots">
-                <p>2 medium</p>
-                <a href="#" onclick="openModal('carrots') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Lemongrass</p>
-                <img src="../images/lemon_grass.jpg" alt="lemongrass">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('lemongrass') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Galangal</p>
-                <img src="../images/galangal.webp" alt="galangal">
-                <p>1 inch piece</p>
-                <a href="#" onclick="openModal('galangal') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Turmeric</p>
-                <img src="../images/turmeric.webp" alt="turmeric">
-                <p>1 tsp, fresh or powder</p>
-                <a href="#" onclick="openModal('turmeric') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>3 cloves</p>
-                <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Shallots</p>
-                <img src="../images/shallots.jpg" alt="shallots">
-                <p>2 medium</p>
-                <a href="#" onclick="openModal('shallots') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Kaffir Lime Leaves</p>
-                <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir_lime_leaves">
-                <p>5 leaves</p>
-                <a href="#" onclick="openModal('kaffir_lime_leaves') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Red Chili</p>
-                <img src="../images/red_chili.webp" alt="red_chili">
-                <p>Optional, 2 pieces</p>
-                <a href="#" onclick="openModal('red_chili') ; return false">Buy Now</a>
-            </section>
-        </section>
-
 
         <section class="recipe">
-            <h2>Recipe</h2>
             <ol>
                 <li>
-                <h4>Step 1: Prepare the chicken and vegetables</h4>
+                    <h4>Step 1: Prepare the chicken and vegetables</h4>
                     <ul>
-                        <li>Cut chicken into bite-sized pieces</li>
-                        <li>Peel and chop potatoes and carrots into chunks</li>
-                        <li>Set aside</li>
-                    </ul>
+                            <li>Cut chicken into bite-sized pieces</li>
+                            <li>Peel and chop potatoes and carrots into chunks</li>
+                            <li>Set aside</li>
+                            </ul>
                 </li>
 
                 <li>
@@ -141,7 +169,7 @@
 
                 <li>
                     <h4>Step 4: Add chicken and vegetables</h4>
-                    <ul>
+                    <ul>                                
                         <li>Add chicken pieces to the curry base</li>
                         <li>Add potatoes and carrots</li>
                         <li>Simmer until chicken is cooked and vegetables are tender</li>
@@ -163,7 +191,7 @@
                         <li>Serve hot with steamed rice</li>
                     </ul>
                 </li>
-            </ol>
+            </ol>               
 
         </section>
     </main>
