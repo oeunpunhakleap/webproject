@@ -5,129 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cha Kdav Sach Morn</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-    <script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Cha Kdav Sach Morn</h1>
-                <h2>ឆាក្ដៅសាច់មាន់</h2>
-                <p>Cha Kdav Sach Morn is a Cambodian stir-fried chicken dish cooked over high heat with garlic, chili, and savory sauces.</p>
-                <p id="calories">Calories <br> 950 kcal (320 kcal per serving)</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Cha Kdav Sach Morn</h1>
+                    <h2 class="khmer-title">ឆាក្ដៅសាច់មាន់</h2>
+                    <p class="description">Cha Kdav Sach Morn is a Cambodian stir-fried chicken dish cooked over high heat with garlic, chili, and savory sauces.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>30m</span></div>
+                        <div class="info-chip">Calories <span>950 kcal (320 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.7/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/cha_kdav_chicken.jpg" alt="Cha Kdav Sach Morn">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                <section class="ingredients-wrapper" id="ingredientSlider">
+
+                    <section class="ingredient">
+                        <p>Chicken</p>
+                        <img src="../images/chicken.png" alt="chicken">
+                        <p>400g</p>
+                        <a href="#" onclick="openModal('chicken'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic cloves">
+                        <p>4 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Kaffir Lime Leaves</p>
+                        <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir lime leaves">
+                        <p>1 medium</p>
+                        <a href="#" onclick="openModal('kaffir_lime_leaves'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Red Chili</p>
+                        <img src="../images/red_chili.webp" alt="red chili peppers">
+                        <p>2–3</p>
+                        <a href="#" onclick="openModal('red_chili'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Galangal</p>
+                        <img src="../images/galangal.webp" alt="galangal">
+                        <p>2–3</p>
+                        <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Turmeric</p>
+                        <img src="../images/turmeric.webp" alt="turmeric">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('turmeric'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Holy Basil</p>
+                        <img src="../images/holy_basil.webp" alt="holy basil">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('holy_basil'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Lemongrass</p>
+                        <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Soy Sauce</p>
+                        <img src="../images/soy_sauce.jpg" alt="soy sauce bottle">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Oyster Sauce</p>
+                        <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Sugar</p>
+                        <img src="../images/sugar.jpg" alt="sugar">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Black Pepper</p>
+                        <img src="../images/pepper.jpg" alt="black pepper">
+                        <p>½ tsp</p>
+                        <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Cooking Oil</p>
+                        <img src="../images/oil.jpg" alt="cooking oil">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                    </section>
             </section>
-
-            <img class="imga" src="../images/cha_kdav_chicken.jpg" alt="Cha Kdav Sach Morn dish" width="300">
-        </section>
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Chicken</p>
-                <img src="../images/chicken.png" alt="chicken">
-                <p>400g</p>
-                <a href="#" onclick="openModal('chicken'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic cloves">
-                <p>4 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Kaffir Lime Leaves</p>
-                <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir lime leaves">
-                <p>1 medium</p>
-                <a href="#" onclick="openModal('kaffir_lime_leaves'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Red Chili</p>
-                <img src="../images/red_chili.webp" alt="red chili peppers">
-                <p>2–3</p>
-                <a href="#" onclick="openModal('red_chili'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Galangal</p>
-                <img src="../images/galangal.webp" alt="galangal">
-                <p>2–3</p>
-                <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Turmeric</p>
-                <img src="../images/turmeric.webp" alt="turmeric">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('turmeric'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Holy Basil</p>
-                <img src="../images/holy_basil.webp" alt="holy basil">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('holy_basil'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Lemongrass</p>
-                <img src="../images/lemon_grass.jpg" alt="lemongrass">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Soy Sauce</p>
-                <img src="../images/soy_sauce.jpg" alt="soy sauce bottle">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Oyster Sauce</p>
-                <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Sugar</p>
-                <img src="../images/sugar.jpg" alt="sugar">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/pepper.jpg" alt="black pepper">
-                <p>½ tsp</p>
-                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Cooking Oil</p>
-                <img src="../images/oil.jpg" alt="cooking oil">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-            </section>
-
         </section>
 
         <section class="recipe">
