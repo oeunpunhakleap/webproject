@@ -5,208 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bay Sach Jruk</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-<script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
 
-<main>
-    <section class="intro">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-        <section class="description">
-            <h1>Bay Sach Jruk</h1>
-            <h2>បាយសាច់ជ្រូក</h2>
-            <p>Bay Sach Jruk is one of Cambodia’s most popular breakfast dishes, made with thinly sliced pork marinated in garlic, soy sauce, fish sauce, and coconut milk, then grilled until tender and slightly caramelized. It is served with rice, fresh vegetables, pickles, and often a light soup, offering a perfect balance of sweet, savory, and smoky flavors.</p>
-            <p id="calories">Calories <br> 600 kcal per serving</p>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Khmer Cuisine</span>
+                    <h1>Bay Sach Jruk</h1>
+                    <h2 class="khmer-title">បាយសាច់ជ្រូក</h2>
+                    <p class="description">Bay Sach Jruk is one of Cambodia’s most popular breakfast dishes, made with thinly sliced pork marinated in garlic, soy sauce, fish sauce, and coconut milk, then grilled until tender and slightly caramelized. It is served with rice, fresh vegetables, pickles, and often a light soup, offering a perfect balance of sweet, savory, and smoky flavors.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>25m</span></div>
+                        <div class="info-chip">Calories <span>600 kcal per serving</span></div>
+                        <div class="info-chip">Rating <span>4.8/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/bay_sach_jruk.jpg" alt="Bay Sach Jruk">
+                </section>
+
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class = "section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                    <section class="ingredients-wrapper" id = "ingredientSlider">     
+
+                        <section class="ingredient">
+                            <p>Pork (Thinly Sliced)</p>
+                            <img src="../images/pork.png" alt="pork">
+                            <p>300g</p>
+                            <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Garlic</p>
+                            <img src="../images/garlic.jpg" alt="garlic">
+                            <p>4 cloves (minced)</p>
+                            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Soy Sauce</p>
+                            <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                            <p>2 tbsp</p>
+                            <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Fish Sauce</p>
+                            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                            <p>1 tbsp</p>
+                            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Sugar</p>
+                            <img src="../images/sugar.jpg" alt="sugar">
+                            <p>1 tbsp</p>
+                            <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Oyster Sauce</p>
+                            <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                            <p>2 tbsp</p>
+                            <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Cooked Rice</p>
+                            <img src="../images/rice.jpg" alt="rice">
+                            <p>2 cups</p>
+                            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Carrot</p>
+                            <img src="../images/carrot.webp" alt="carrot">
+                            <p>Sliced</p>
+                            <a href="#" onclick="openModal('carrots'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Radish</p>
+                            <img src="../images/radish.jpg" alt="radish">
+                            <p>Sliced</p>
+                            <a href="#" onclick="openModal('radish'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Cucumber</p>
+                            <img src="../images/cucumber.jpg" alt="cucumber">
+                            <p>Sliced</p>
+                            <a href="#" onclick="openModal('cucumber'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p> Green Onions</p>
+                            <img src="../images/green_onions.jpg" alt="green onions">
+                            <p>Sliced</p>
+                            <a href="#" onclick="openModal('green_onions'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p> Oil</p>
+                            <img src="../images/oil.jpg" alt="green onions">
+                            <p>for serving</p>
+                            <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Lemons</p>
+                            <img src="../images/lemon.jpg" alt="lemon">
+                            <p>Sliced</p>
+                            <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Fried Egg (Optional)</p>
+                            <img src="../images/eggs.jpg" alt="egg">
+                            <p>1 egg</p>
+                            <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+                        </section>
+            </section>
         </section>
 
-        <img src="../images/bay_sach_jruk.jpg" alt="Bay Sach Jruk" width="300">
+        <section class="recipe">
+            <h2>Recipe</h2>
 
-    </section>
+            <ol>
 
-    <section class="ingredients">
+                <li>
+                    <h4>Step 1: Marinate the pork</h4>
+                    <ul>
+                        <li>Mix garlic, soy sauce, fish sauce, oyster sauce, and sugar</li>
+                        <li>Add sliced pork and mix well</li>
+                        <li>Marinate for at least 1 hour (or overnight for best flavor)</li>
+                    </ul>
+                </li>
 
-        <section class="ingredient">
-            <p>Pork (Thinly Sliced)</p>
-            <img src="../images/pork.png" alt="pork">
-            <p>300g</p>
-            <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
+                <li>
+                    <h4>Step 2: Grill the pork</h4>
+                    <ul>
+                        <li>Heat a grill or pan (charcoal grill is best)</li>
+                        <li>Cook pork until golden brown and slightly charred</li>
+                        <li>Turn occasionally to get even color</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Prepare vegetables</h4>
+                    <ul>
+                        <li>Slice cucumber, radish, and carrot</li>
+                        <li>Mix all vegetables together with lemons</li>
+                        <li>Add salt , sugar, lemons, garlic and fish sauce to taste</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <h4>Step 4: Prepare oil sauce</h4>
+                    <ul>
+                        <li>Heat oil in a pan</li>
+                        <li>Add garlic and sauté(optional) until fragrant</li>
+                        <li>Add soy sauce, fish sauce, oyster sauce, and sugar</li>
+                        <li>Add green onion</li>
+                        <li>Stir well and let it simmer for a few minutes</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Serve</h4>
+                    <ul>
+                        <li>Place rice on a plate</li>
+                        <li>Add grilled pork on top</li>
+                        <li>Serve with vegetables and and oil sauce</li>
+                        <li>Add fried egg on top (optional)</li>
+                        <li>Optional: serve with a bowl of light soup would be more delicious</li>
+                    </ul>
+                </li>
+
+            </ol>
         </section>
+    </main>
 
-        <section class="ingredient">
-            <p>Garlic</p>
-            <img src="../images/garlic.jpg" alt="garlic">
-            <p>4 cloves (minced)</p>
-            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-        </section>
+    <footer>
+    <a href="https://youtu.be/sa0inXURh90?si=ZcrTQELquZm85z8a">Here is the link to a tutorial youtube video</a>
+    </footer>
 
-        <section class="ingredient">
-            <p>Soy Sauce</p>
-            <img src="../images/soy_sauce.jpg" alt="soy sauce">
-            <p>2 tbsp</p>
-            <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
-        </section>
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
 
-        <section class="ingredient">
-            <p>Fish Sauce</p>
-            <img src="../images/fish_sauce.jpg" alt="fish sauce">
-            <p>1 tbsp</p>
-            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-        </section>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
 
-        <section class="ingredient">
-            <p>Sugar</p>
-            <img src="../images/sugar.jpg" alt="sugar">
-            <p>1 tbsp</p>
-            <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Oyster Sauce</p>
-            <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
-            <p>2 tbsp</p>
-            <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Cooked Rice</p>
-            <img src="../images/rice.jpg" alt="rice">
-            <p>2 cups</p>
-            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Carrot</p>
-            <img src="../images/carrot.webp" alt="carrot">
-            <p>Sliced</p>
-            <a href="#" onclick="openModal('carrots'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Radish</p>
-            <img src="../images/radish.jpg" alt="radish">
-            <p>Sliced</p>
-            <a href="#" onclick="openModal('radish'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Cucumber</p>
-            <img src="../images/cucumber.jpg" alt="cucumber">
-            <p>Sliced</p>
-            <a href="#" onclick="openModal('cucumber'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p> Green Onions</p>
-            <img src="../images/green_onions.jpg" alt="green onions">
-            <p>Sliced</p>
-            <a href="#" onclick="openModal('green_onions'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p> Oil</p>
-            <img src="../images/oil.jpg" alt="green onions">
-            <p>for serving</p>
-            <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Lemons</p>
-            <img src="../images/lemon.jpg" alt="lemon">
-            <p>Sliced</p>
-            <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Fried Egg (Optional)</p>
-            <img src="../images/eggs.jpg" alt="egg">
-            <p>1 egg</p>
-            <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
-        </section>
-
-    </section>
-
-    <section class="recipe">
-        <h2>Recipe</h2>
-
-        <ol>
-
-            <li>
-                <h4>Step 1: Marinate the pork</h4>
-                <ul>
-                    <li>Mix garlic, soy sauce, fish sauce, oyster sauce, and sugar</li>
-                    <li>Add sliced pork and mix well</li>
-                    <li>Marinate for at least 1 hour (or overnight for best flavor)</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 2: Grill the pork</h4>
-                <ul>
-                    <li>Heat a grill or pan (charcoal grill is best)</li>
-                    <li>Cook pork until golden brown and slightly charred</li>
-                    <li>Turn occasionally to get even color</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 3: Prepare vegetables</h4>
-                <ul>
-                    <li>Slice cucumber, radish, and carrot</li>
-                    <li>Mix all vegetables together with lemons</li>
-                    <li>Add salt , sugar, lemons, garlic and fish sauce to taste</li>
-                </ul>
-            </li>
-            
-            <li>
-                <h4>Step 4: Prepare oil sauce</h4>
-                <ul>
-                    <li>Heat oil in a pan</li>
-                    <li>Add garlic and sauté(optional) until fragrant</li>
-                    <li>Add soy sauce, fish sauce, oyster sauce, and sugar</li>
-                    <li>Add green onion</li>
-                    <li>Stir well and let it simmer for a few minutes</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 5: Serve</h4>
-                <ul>
-                    <li>Place rice on a plate</li>
-                    <li>Add grilled pork on top</li>
-                    <li>Serve with vegetables and and oil sauce</li>
-                    <li>Add fried egg on top (optional)</li>
-                    <li>Optional: serve with a bowl of light soup would be more delicious</li>
-                </ul>
-            </li>
-
-        </ol>
-    </section>
-</main>
-
-<footer>
-   <a href="https://youtu.be/sa0inXURh90?si=ZcrTQELquZm85z8a">Here is the link to a tutorial youtube video</a>
-</footer>
-
-<div id="shopModal" class="modal">
-    <div class="modal-content">
-        <h3 id="modalTitle">Select a shop</h3>
-        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
-
-        <button onclick="goToShop('aeon')">AEON</button>
-        <button onclick="goToShop('makro')">Makro</button>
-        <button onclick="goToShop('deli')">Deli</button>
-
-        <br><br>
-        <button onclick="closeModal()">Cancel</button>
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
     </div>
-</div>
 
 </body>
 </html>
