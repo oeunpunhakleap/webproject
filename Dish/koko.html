@@ -5,102 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somlor Korko</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-            <section class="description">
-                <h1>Somlor Korko</h1>
-                <h2>សម្លរកកូរ</h2>
-                <p>Somlor Korko is a traditional Cambodian soup known for its rich and hearty flavor. It is made with a mix of fresh vegetables, herbs, and often fish or pork, cooked in a thick, savory broth with prahok. This dish is nutritious, aromatic, and represents the authentic taste of Khmer home cooking.</p>
-                <p id="calories">Calories <br> 1500 kcal (400 kcal per serving)</p>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Somlor Korko</h1>
+                    <h2 class="khmer-title">សម្លរកកូរ</h2>
+                    <p class="description">Somlor Korko is a traditional Cambodian soup known for its rich and hearty flavor. It is made with a mix of fresh vegetables, herbs, and often fish or pork, cooked in a thick, savory broth with prahok. This dish is nutritious, aromatic, and represents the authentic taste of Khmer home cooking.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>60m</span></div>
+                        <div class="info-chip">Calories <span>1500 kcal (400 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.8/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/somlor_korko.jpg" alt="Somlor Korko">
+                </section>
+        </header>
+    
+        <section class="ingredients-section">
+            <h3 class = "section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                    <section class="ingredients-wrapper" id = "ingredientSlider">
+
+
+
+                        <section class="ingredient">
+                            <p>Fish (Snakehead or Catfish)</p>
+                            <img src="../images/catfish.webp" alt="fish">
+                            <p>1 whole fish (cut into pieces)</p>
+                            <a href="#" onclick="openModal('fish'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Pork Belly or Pork Ribs</p>
+                            <img src="../images/pork.png" alt="pork">
+                            <p>200g</p>
+                            <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Kroeung (Spice Paste)</p>
+                            <img src="../images/krerng_bok.jpg" alt="kroeung">
+                            <p>3 tbsp</p>
+                            <a href="#" onclick="openModal('kroeung'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Green Papaya</p>
+                            <img src="../images/green_papaya.jpg" alt="vegetables">
+                            <p>150g</p>
+                            <a href="#" onclick="openModal('green_papaya'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Pumpkin</p>
+                            <img src="../images/pumpkin.webp" alt="vegetables">
+                            <p>150g</p>
+                            <a href="#" onclick="openModal('pumpkin'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Eggplant</p>
+                            <img src="../images/eggplant.webp" alt="vegetables">
+                            <p>100g</p>
+                            <a href="#" onclick="openModal('eggplant'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Long Beans</p>
+                            <img src="../images/long_beans.webp" alt="vegetables">
+                            <p>100g</p>
+                            <a href="#" onclick="openModal('long_beans'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Roasted Rice Powder</p>
+                            <img src="../images/ongkor_ling.jpg" alt="roasted rice">
+                            <p>2 tbsp</p>
+                            <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Fermented Fish Paste (Prahok)</p>
+                            <img src="../images/brohok.jpeg" alt="prahok">
+                            <p>1–2 tbsp</p>
+                            <a href="#" onclick="openModal('prahok'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Ivy Gourd Leaves (Slerk Bas) / Moringa Leaves</p>
+                            <img src="../images/slerkbas.jpg" alt="leaves">
+                            <p>1 handful</p>
+                            <a href="#" onclick="openModal('Ivy_gourd_leaves'); return false">Buy Now</a>
+                        </section>
             </section>
-            <img src="../images/somlor_korko.jpg" alt="Somlor Korko" width="300">
-
-        </section>
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Fish (Snakehead or Catfish)</p>
-                <img src="../images/catfish.webp" alt="fish">
-                <p>1 whole fish (cut into pieces)</p>
-                <a href="#" onclick="openModal('fish'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Pork Belly or Pork Ribs</p>
-                <img src="../images/pork.png" alt="pork">
-                <p>200g</p>
-                <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Kroeung (Spice Paste)</p>
-                <img src="../images/krerng_bok.jpg" alt="kroeung">
-                <p>3 tbsp</p>
-                <a href="#" onclick="openModal('kroeung'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Green Papaya</p>
-                <img src="../images/green_papaya.jpg" alt="vegetables">
-                <p>150g</p>
-                <a href="#" onclick="openModal('green_papaya'); return false">Buy Now</a>
-            </section>
-
-             <section class="ingredient">
-                <p>Pumpkin</p>
-                <img src="../images/pumpkin.webp" alt="vegetables">
-                <p>150g</p>
-                <a href="#" onclick="openModal('pumpkin'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Eggplant</p>
-                <img src="../images/eggplant.webp" alt="vegetables">
-                <p>100g</p>
-                <a href="#" onclick="openModal('eggplant'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Long Beans</p>
-                <img src="../images/long_beans.webp" alt="vegetables">
-                <p>100g</p>
-                <a href="#" onclick="openModal('long_beans'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Roasted Rice Powder</p>
-                <img src="../images/ongkor_ling.jpg" alt="roasted rice">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('rice'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Fermented Fish Paste (Prahok)</p>
-                <img src="../images/brohok.jpeg" alt="prahok">
-                <p>1–2 tbsp</p>
-                <a href="#" onclick="openModal('prahok'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Ivy Gourd Leaves (Slerk Bas) / Moringa Leaves</p>
-                <img src="../images/slerkbas.jpg" alt="leaves">
-                <p>1 handful</p>
-                <a href="#" onclick="openModal('Ivy_gourd_leaves'); return false">Buy Now</a>
-            </section>
-
         </section>
 
         <section class="recipe">
