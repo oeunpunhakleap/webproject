@@ -6,73 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pork Rice Cake</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Pork Rice Cake</h1>
-                <h2>នំអន្សមជ្រូក</h2>
-                <p>Num Ansom Chrouk is a traditional Khmer sticky rice cake made with glutinous rice, pork belly, and mung beans. The ingredients are carefully wrapped in banana leaves and steamed for several hours, creating a soft, rich, and savory flavor.</p>
-                <p id="calories">Calories <br> 1600 kcal (400 kcal per serving)</p>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Pork Rice Cake</h1>
+                    <h2 class="khmer-title">នំអន្សមជ្រូក</h2>
+                    <p class="description">Num Ansom Chrouk is a traditional Khmer sticky rice cake made with glutinous rice, pork belly, and mung beans. The ingredients are carefully wrapped in banana leaves and steamed for several hours, creating a soft, rich, and savory flavor.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span> 10 h </span></div>
+                        <div class="info-chip">Calories <span>1600 kcal (400 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>5/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/ansom.jpg" alt="Fish Amok">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                <section class="ingredients-wrapper" id="ingredientSlider">
+                    <section class="ingredient">
+                        <p>Glutinous Rice</p>
+                        <img src="../images/glutinous-rice-flour.jpg" alt="glutinous_rice">
+                        <p>500g</p>
+                        <a href="#" onclick="openModal('glutinous_rice'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Pork Belly</p>
+                        <img src="../images/pork-belly.jpg" alt="pork_belly">
+                        <p>300g</p>
+                        <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Mung Beans</p>
+                        <img src="../images/mung_beans.webp" alt="mung_beans">
+                        <p>200g</p>
+                        <a href="#" onclick="openModal('mung_beans'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Banana Leaves</p>
+                        <img src="../images/banana_leaves.jpg" alt="banana_leaves">
+                        <p>For wrapping</p>
+                        <a href="#" onclick="openModal('banana_leaves'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Black Pepper</p>
+                        <img src="../images/black_pepper.jpg" alt="black_pepper">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Coconut Milk</p>
+                        <img src="../images/coconut_milk.jpg" alt="coconut_milk">
+                        <p>200ml</p>
+                        <a href="#" onclick="openModal('coconut_milk'); return false">Buy Now</a>
+                    </section>
+                </section>
             </section>
-            <img src="../images/ansom.jpg" alt="Ah Mok" width="300">
-        </section>
-
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Glutinous Rice</p>
-                <img src="../images/glutinous-rice-flour.jpg" alt="glutinous_rice">
-                <p>500g</p>
-                <a href="#" onclick="openModal('glutinous_rice'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Pork Belly</p>
-                <img src="../images/pork-belly.jpg" alt="pork_belly">
-                <p>300g</p>
-                <a href="#" onclick="openModal('pork_belly'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Mung Beans</p>
-                <img src="../images/mung_beans.webp" alt="mung_beans">
-                <p>200g</p>
-                <a href="#" onclick="openModal('mung_beans'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Banana Leaves</p>
-                <img src="../images/banana_leaves.jpg" alt="banana_leaves">
-                <p>For wrapping</p>
-                <a href="#" onclick="openModal('banana_leaves'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/black_pepper.jpg" alt="black_pepper">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Coconut Milk</p>
-                <img src="../images/coconut_milk.jpg" alt="coconut_milk">
-                <p>200ml</p>
-                <a href="#" onclick="openModal('coconut_milk'); return false">Buy Now</a>
-            </section>
-
         </section>
 
         <section class="recipe">
