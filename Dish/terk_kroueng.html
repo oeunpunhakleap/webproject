@@ -6,85 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terk Kroeung</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Terk Kroueng</h1>
-                <h2>ទឹកគ្រឿង</h2>
-                <p>Terk Kroeung is a traditional Khmer fish dip made with finely ground herbs, kroeung spices, and grilled or steamed fish, served with fresh vegetables.</p>
-                <p id="calories">Calories <br> 90 kcal per serving</p>
-            </section>
-            <img class="imga" src="../images/terk_kroeung.webp" alt="Ah Mok" width="300">
-        </section>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
 
-        <section class="ingredients">
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Terk Kroeung</h1>
+                    <h2 class="khmer-title">ទឹកគ្រឿង</h2>
+                    <p class="description">Terk Kroeung is a traditional Khmer fish dip made with finely ground herbs, kroeung spices, and grilled or steamed fish, served with fresh vegetables.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>35m</span></div>
+                        <div class="info-chip">Calories <span>90 kcal per serving</span></div>
+                        <div class="info-chip">Rating <span>4.89/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/terk_kroeung.webp" alt="Terk Kroeung">
+                </section>
+        </header>
 
-            <section class="ingredient">
-                <p>Snake Head Fish</p>
-                <img src="../images/snakehead.png" alt="fish">
-                <p>1 fish</p>
-                <a href="#" onclick="openModal('fish') ; return false">Buy Now</a>
-            </section>
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
 
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>2 cloves</p>
-                <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
-            </section>
+                <section class="ingredients-wrapper" id="ingredientSlider">
 
-            <section class="ingredient">
-                <p>Lemongrass</p>
-                <img src="../images/lemon_grass.jpg" alt="lemongrass">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('lemongrass') ; return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Snake Head Fish</p>
+                        <img src="../images/snakehead.png" alt="fish">
+                        <p>1 fish</p>
+                        <a href="#" onclick="openModal('fish') ; return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Galangal</p>
-                <img src="../images/galangal.webp" alt="galangal">
-                <p>1 inch piece</p>
-                <a href="#" onclick="openModal('galangal') ; return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>2 cloves</p>
+                        <a href="#" onclick="openModal('garlic') ; return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Kaffir lime leaves</p>
-                <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir-lime-leaves">
-                <p>4 leaves</p>
-                <a href="#" onclick="openModal('kaffir') ; return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Lemongrass</p>
+                        <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('lemongrass') ; return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Cucumber</p>
-                <img src="../images/cucumber.jpg" alt="cucumber">
-                <p>1 medium</p>
-                <a href="#" onclick="openModal('cucumber') ; return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Galangal</p>
+                        <img src="../images/galangal.webp" alt="galangal">
+                        <p>1 inch piece</p>
+                        <a href="#" onclick="openModal('galangal') ; return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Cabbage (Boiled)</p>
-                <img src="../images/boiled_cabbage.jpg" alt="cabbage">
-                <p>1</p>
-                <a href="#" onclick="openModal('cabbage') ; return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Kaffir lime leaves</p>
+                        <img src="../images/kaffir-lime-leaves.jpg" alt="kaffir-lime-leaves">
+                        <p>4 leaves</p>
+                        <a href="#" onclick="openModal('kaffir') ; return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Long Beans</p>
-                <img src="../images/long_bean.jpg" alt="long beans">
-                <p>100g</p>
-                <a href="#" onclick="openModal('long_beans') ; return false">Buy Now</a>
+                    <section class="ingredient">
+                        <p>Cucumber</p>
+                        <img src="../images/cucumber.jpg" alt="cucumber">
+                        <p>1 medium</p>
+                        <a href="#" onclick="openModal('cucumber') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Cabbage (Boiled)</p>
+                        <img src="../images/boiled_cabbage.jpg" alt="cabbage">
+                        <p>1</p>
+                        <a href="#" onclick="openModal('cabbage') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Long Beans</p>
+                        <img src="../images/long_bean.jpg" alt="long beans">
+                        <p>100g</p>
+                        <a href="#" onclick="openModal('long_beans') ; return false">Buy Now</a>
+                    </section>
+
             </section>
         </section>
         <section class="recipe">
