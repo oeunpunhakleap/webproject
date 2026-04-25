@@ -5,108 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sngor Sach Ko</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-    <script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Beef Soup with Lemongrass & Lime</h1>
-                <h2>ស្ងោរជ្រក់សាច់គោ</h2>
-                <p>This Cambodian soup is light, aromatic, and refreshing. It uses lemongrass, garlic, and lime to create a sour and savory broth, combined with tender beef and fresh herbs.</p>
-                <p id="calories">Calories <br> 600 kcal (200 kcal per serving)</p>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Sngor Sach Ko</h1>
+                    <h2 class="khmer-title">ស្ងោរសាច់គោ</h2>
+                    <p class="description">Sngor Sach Ko is a traditional Cambodian beef stew made by slow-cooking beef with lemongrass, galangal, and other aromatic spices. It has a rich, savory flavor and tender meat that falls apart easily.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>15m</span></div>
+                        <div class="info-chip">Calories <span>600 kcal (200 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.8/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/beef_soup.jpg" alt="Sngor Sach Ko">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class = "section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                    <section class="ingredients-wrapper" id = "ingredientSlider">
+
+                        <section class="ingredient">
+                            <p>Beef</p>
+                            <img src="../images/beef.webp" alt="beef">
+                            <p>300g</p>
+                            <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Lemongrass</p>
+                            <img src="../images/lemon_grass.jpg" alt="lemongrass">
+                            <p>2 stalks</p>
+                            <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Garlic</p>
+                            <img src="../images/garlic.jpg" alt="garlic">
+                            <p>3 cloves</p>
+                            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Galangal</p>
+                            <img src="../images/galangal.webp" alt="galangal">
+                            <p>1 small piece</p>
+                            <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Lime</p>
+                            <img src="../images/lime.avif" alt="lime">
+                            <p>1–2</p>
+                            <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Spring Onion</p>
+                            <img src="../images/spring_onion.jpg" alt="spring onion">
+                            <p>2 stalks</p>
+                            <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Chili</p>
+                            <img src="../images/red_chili.webp" alt="chili">
+                            <p>1–2 (optional)</p>
+                            <a href="#" onclick="openModal('chili'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Herb</p>
+                            <img src="../images/herbs.jpg" alt="herb">
+                            <p>100g (optional)</p>
+                            <a href="#" onclick="openModal('herbs_neang_vong'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Fish Sauce</p>
+                            <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                            <p>1 tbsp</p>
+                            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Sugar</p>
+                            <img src="../images/sugar.jpg" alt="sugar">
+                            <p>1 tsp</p>
+                            <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+                        </section>
+
+                        <section class="ingredient">
+                            <p>Water</p>
+                            <img src="../images/water.png" alt="water">
+                            <p>1 liter</p>
+                            <a href="#" onclick="openModal('water'); return false">Buy Now</a>
+                        </section>
             </section>
-
-            <img class="imga" src="../images/beef_soup.jpg" alt="beef soup with lemongrass and lime" width="300">
-        </section>
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Beef</p>
-                <img src="../images/beef.webp" alt="beef">
-                <p>300g</p>
-                <a href="#" onclick="openModal('beef'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Lemongrass</p>
-                <img src="../images/lemon_grass.jpg" alt="lemongrass">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('lemon_grass'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>3 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Galangal</p>
-                <img src="../images/galangal.webp" alt="galangal">
-                <p>1 small piece</p>
-                <a href="#" onclick="openModal('galangal'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Lime</p>
-                <img src="../images/lime.avif" alt="lime">
-                <p>1–2</p>
-                <a href="#" onclick="openModal('lemon'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Spring Onion</p>
-                <img src="../images/spring_onion.jpg" alt="spring onion">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Chili</p>
-                <img src="../images/red_chili.webp" alt="chili">
-                <p>1–2 (optional)</p>
-                <a href="#" onclick="openModal('chili'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Herb</p>
-                <img src="../images/herbs.jpg" alt="herb">
-                <p>100g (optional)</p>
-                <a href="#" onclick="openModal('herbs_neang_vong'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Sugar</p>
-                <img src="../images/sugar.jpg" alt="sugar">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Water</p>
-                <img src="../images/water.png" alt="water">
-                <p>1 liter</p>
-                <a href="#" onclick="openModal('water'); return false">Buy Now</a>
-            </section>
-
         </section>
 
         <section class="recipe">
