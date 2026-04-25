@@ -1,7 +1,7 @@
 const dishes = [
     { name: "Fish Amok", link: "../Dish/amok.html" },
     { name: "Khmer Curry", link: "../Dish/curry.html" },
-    { name: "Samlor Machu", link: "../Dish/samlor_maju" },
+    { name: "Samlor Machu", link: "../Dish/samlor_maju.html" },
     { name: "Pumpkin Custard", link: "../Dish/pumpkin_custard.html" },
     { name: "Num Ansom Chrouk", link: "../Dish/ansom_chruk.html" },
     { name: "Terk Kroeung", link: "../Dish/terk_kroeung.html" },
