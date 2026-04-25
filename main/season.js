@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "../images/ansom.jpg",
             time: "60 mins",
             level: "Medium",
-            desc: "Sticky rice cake with pork and mung bean"
+            desc: "Sticky-rice with pork and bean"
         },
         {
             name: "Khmer Curry",
