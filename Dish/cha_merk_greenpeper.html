@@ -5,187 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Squid with Green Peppercorn</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-<script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-<main>
-    <section class="intro">
-        <section class="description">
-            <h1>Delicious Squid with Green Peppercorn</h1>
-            <h2>ឆាមឹកម្រេចខ្ចី</h2>
-            <p>This Cambodian dish features fresh squid stir-fried with green peppercorn, garlic, and savory sauces. It is aromatic, slightly spicy, and highlights the natural sweetness of seafood.</p>
-            <p id="calories">Calories <br> 700 kcal (230 kcal per serving)</p>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>  
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Delicious Squid with Green Peppercorn</h1>
+                    <h2 class="khmer-title">ឆាមឹកម្រេចខ្ចី</h2>
+                    <p class="description">This Cambodian dish features fresh squid stir-fried with green peppercorn, garlic, and savory sauces. It is aromatic, slightly spicy, and highlights the natural sweetness of seafood.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>30m</span></div>
+                        <div class="info-chip">Calories <span>700 kcal (230 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.7/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/squid_pepper.jpg" alt="Squid with green peppercorn">
+                </section>          
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                <section class="ingredients-wrapper" id="ingredientSlider">
+
+                    <section class="ingredient">
+                        <p>Fresh Squid</p>
+                        <img src="../images/squid.jpg" alt="fresh squid">
+                        <p>400g</p>
+                        <a href="#" onclick="openModal('squid'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Green Peppercorn</p>
+                        <img src="../images/green_pepper.webp" alt="green pepper">
+                        <p>2–3 stems</p>
+                        <a href="#" onclick="openModal('green_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>4 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Onion</p>
+                        <img src="../images/spring_onion.jpg" alt="onion">
+                        <p>1 small</p>
+                        <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Green Bell Pepper</p>
+                        <img src="../images/green_bell_pepper.jpg" alt="green bell pepper">
+                        <p>1-2</p>
+                        <a href="#" onclick="openModal('green_bell_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Red Chili</p>
+                        <img src="../images/red_chili.webp" alt="red chili">
+                        <p>1–2 (optional)</p>
+                        <a href="#" onclick="openModal('red_chili'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Oyster Sauce</p>
+                        <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Sugar</p>
+                        <img src="../images/sugar.jpg" alt="sugar">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Cooking Oil</p>
+                        <img src="../images/oil.jpg" alt="cooking oil">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                    </section>
+                </section>
         </section>
 
-        <img class="imga" src="../images/squid_pepper.jpg" alt="Squid with green peppercorn" width="300">
-    </section>
+        <section class="recipe">
+            <ol>
 
-    <section class="ingredients">
+                <li>
+                    <h4>Step 1: Prepare squid</h4>
+                    <ul>
+                        <li>Clean the squid and remove the inside</li>
+                        <li>Cut into rings or bite-sized pieces</li>
+                        <li>Set aside</li>
+                    </ul>
+                </li>
 
-        <section class="ingredient">
-            <p>Fresh Squid</p>
-            <img src="../images/squid.jpg" alt="fresh squid">
-            <p>400g</p>
-            <a href="#" onclick="openModal('squid'); return false">Buy Now</a>
+                <li>
+                    <h4>Step 2: Prepare ingredients</h4>
+                    <ul>
+                        <li>Chop garlic finely</li>
+                        <li>Slice onion and green bell pepper</li>
+                        <li>Cut chili if using</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 3: Stir fry garlic</h4>
+                    <ul>
+                        <li>Heat cooking oil in a pan</li>
+                        <li>Add garlic and cook until fragrant</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 4: Cook squid</h4>
+                    <ul>
+                        <li>Add squid and stir fry quickly (1–2 minutes)</li>
+                        <li>Avoid overcooking</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 5: Add vegetables</h4>
+                    <ul>
+                        <li>Add onion, green bell pepper, chili, and green peppercorn</li>
+                        <li>Stir fry briefly</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Season</h4>
+                    <ul>
+                        <li>Add fish sauce, oyster sauce, and sugar</li>
+                        <li>Mix well</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 7: Finish</h4>
+                    <ul>
+                        <li>Taste and adjust seasoning</li>
+                        <li>Serve immediately while hot</li>
+                    </ul>
+                </li>
+
+            </ol>
         </section>
 
-        <section class="ingredient">
-            <p>Green Peppercorn</p>
-            <img src="../images/green_pepper.webp" alt="green pepper">
-            <p>2–3 stems</p>
-            <a href="#" onclick="openModal('green_pepper'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Garlic</p>
-            <img src="../images/garlic.jpg" alt="garlic">
-            <p>4 cloves</p>
-            <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Onion</p>
-            <img src="../images/spring_onion.jpg" alt="onion">
-            <p>1 small</p>
-            <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Green Bell Pepper</p>
-            <img src="../images/green_bell_pepper.jpg" alt="green bell pepper">
-            <p>1-2</p>
-            <a href="#" onclick="openModal('green_bell_pepper'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Red Chili</p>
-            <img src="../images/red_chili.webp" alt="red chili">
-            <p>1–2 (optional)</p>
-            <a href="#" onclick="openModal('red_chili'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Fish Sauce</p>
-            <img src="../images/fish_sauce.jpg" alt="fish sauce">
-            <p>1 tbsp</p>
-            <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Oyster Sauce</p>
-            <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
-            <p>1 tbsp</p>
-            <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Sugar</p>
-            <img src="../images/sugar.jpg" alt="sugar">
-            <p>1 tsp</p>
-            <a href="#" onclick="openModal('sugar'); return false">Buy Now</a>
-        </section>
-
-        <section class="ingredient">
-            <p>Cooking Oil</p>
-            <img src="../images/oil.jpg" alt="cooking oil">
-            <p>2 tbsp</p>
-            <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-        </section>
-
-    </section>
-
-    <section class="recipe">
-        <ol>
-
-            <li>
-                <h4>Step 1: Prepare squid</h4>
-                <ul>
-                    <li>Clean the squid and remove the inside</li>
-                    <li>Cut into rings or bite-sized pieces</li>
-                    <li>Set aside</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 2: Prepare ingredients</h4>
-                <ul>
-                    <li>Chop garlic finely</li>
-                    <li>Slice onion and green bell pepper</li>
-                    <li>Cut chili if using</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 3: Stir fry garlic</h4>
-                <ul>
-                    <li>Heat cooking oil in a pan</li>
-                    <li>Add garlic and cook until fragrant</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 4: Cook squid</h4>
-                <ul>
-                    <li>Add squid and stir fry quickly (1–2 minutes)</li>
-                    <li>Avoid overcooking</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 5: Add vegetables</h4>
-                <ul>
-                    <li>Add onion, green bell pepper, chili, and green peppercorn</li>
-                    <li>Stir fry briefly</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 6: Season</h4>
-                <ul>
-                    <li>Add fish sauce, oyster sauce, and sugar</li>
-                    <li>Mix well</li>
-                </ul>
-            </li>
-
-            <li>
-                <h4>Step 7: Finish</h4>
-                <ul>
-                    <li>Taste and adjust seasoning</li>
-                    <li>Serve immediately while hot</li>
-                </ul>
-            </li>
-
-        </ol>
-    </section>
 
 
+    </main>
 
-</main>
+    <footer>
+    <a href="https://youtu.be/k1aSIaGj_Bk?si=6hcs0NwizPbeB0Jd">Here is the link to a tutorial youtube video</a>
+    </footer>
 
-<footer>
-   <a href="https://youtu.be/k1aSIaGj_Bk?si=6hcs0NwizPbeB0Jd">Here is the link to a tutorial youtube video</a>
-</footer>
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Select a shop</h3>
+            <p id="shopMessage" style="color:red; margin-top:10px;"></p>
+            <button onclick="goToShop('aeon')">AEON</button>
+            <button onclick="goToShop('makro')">Makro</button>
+            <button onclick="goToShop('deli')">Deli</button>
 
-<div id="shopModal" class="modal">
-    <div class="modal-content">
-        <h3 id="modalTitle">Select a shop</h3>
-        <p id="shopMessage" style="color:red; margin-top:10px;"></p>
-        <button onclick="goToShop('aeon')">AEON</button>
-        <button onclick="goToShop('makro')">Makro</button>
-        <button onclick="goToShop('deli')">Deli</button>
-
-        <br><br>
-        <button onclick="closeModal()">Cancel</button>
+            <br><br>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
     </div>
-</div>
 
 </body>
 </html>
