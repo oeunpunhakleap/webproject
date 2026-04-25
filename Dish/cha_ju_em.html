@@ -5,136 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet and Sour Pork Ribs</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-</head>
-
-<body>
     <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
+</head>
+<body>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Sweet and Sour Pork Ribs</h1>
-                <h2>ឆាឆ្អឹងជំនីជូអែម</h2>
-                <p>This Cambodian dish features crispy pork ribs stir-fried in a flavorful sweet and sour sauce made with garlic, ketchup, fish sauce, and sugar. It is balanced, tangy, and delicious.</p>
-                <p id="calories">Calories <br> 1200 kcal (400 kcal per serving)</p>
-            </section>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-            <img class="imga" src="../images/stir_pork_ribs.jpg" alt="Sweet and sour pork ribs" width="300">
-        </section>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
 
-        <section class="ingredients">
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Khmer Cuisine</span>
+                    <h1>Sweet and Sour Pork Ribs</h1>
+                    <h2 class="khmer-title">ឆាឆ្អឹងជំនីជូអែម</h2>
+                    <p class="description">This Cambodian dish features crispy pork ribs stir-fried in a flavorful sweet and sour sauce made with garlic, ketchup, fish sauce, and sugar. It is balanced, tangy, and delicious.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>30m</span></div>
+                        <div class="info-chip">Calories <span>1200 kcal (400 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.7/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/stir_pork_ribs.jpg" alt="Sweet and sour pork ribs">
+                </section>
+        </header>
 
-            <section class="ingredient">
-                <p>Pork Ribs</p>
-                <img src="../images/pork_ribs.webp" alt="pork ribs">
-                <p>500g</p>
-                <a href="#" onclick="openModal('pork_ribs'); return false">Buy Now</a>
-            </section>
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
 
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>4 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
+                <section class="ingredients-wrapper" id="ingredientSlider">
 
-            <section class="ingredient">
-                <p>Cripy Fried Powder</p>
-                <img src="../images/crispy_fried_powder.png" alt="crispy fried powder">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('crispy_fried_powder'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Pork Ribs</p>
+                        <img src="../images/pork_ribs.webp" alt="pork ribs">
+                        <p>500g</p>
+                        <a href="#" onclick="openModal('pork_ribs'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Egg</p>
-                <img src="../images/eggs.jpg" alt="egg">
-                <p>1</p>
-                <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>4 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Onion</p>
-                <img src="../images/onion.jpg" alt="onion">
-                <p>1 medium</p>
-                <a href="#" onclick="openModal('onion'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Cripy Fried Powder</p>
+                        <img src="../images/crispy_fried_powder.png" alt="crispy fried powder">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('crispy_fried_powder'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Bell Pepper</p>
-                <img src="../images/green_bell_pepper.jpg" alt="green bell pepper">
-                <p>1</p>
-                <a href="#" onclick="openModal('green_bell_pepper'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Egg</p>
+                        <img src="../images/eggs.jpg" alt="egg">
+                        <p>1</p>
+                        <a href="#" onclick="openModal('eggs'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Tomato</p>
-                <img src="../images/tomato.webp" alt="tomato">
-                <p>1</p>
-                <a href="#" onclick="openModal('tomatoes'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Onion</p>
+                        <img src="../images/onion.jpg" alt="onion">
+                        <p>1 medium</p>
+                        <a href="#" onclick="openModal('onion'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Pineapple</p>
-                <img src="../images/pineapple.webp" alt="pineapple">
-                <p>1 cup</p>
-                <a href="#" onclick="openModal('pineapple'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Bell Pepper</p>
+                        <img src="../images/green_bell_pepper.jpg" alt="green bell pepper">
+                        <p>1</p>
+                        <a href="#" onclick="openModal('green_bell_pepper'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Ketchup</p>
-                <img src="../images/chili_sauce.webp" alt="cili sauce">
-                <p>3 tbsp</p>
-                <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Tomato</p>
+                        <img src="../images/tomato.webp" alt="tomato">
+                        <p>1</p>
+                        <a href="#" onclick="openModal('tomatoes'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Pineapple</p>
+                        <img src="../images/pineapple.webp" alt="pineapple">
+                        <p>1 cup</p>
+                        <a href="#" onclick="openModal('pineapple'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Oyster Sauce</p>
-                <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Ketchup</p>
+                        <img src="../images/chili_sauce.webp" alt="cili sauce">
+                        <p>3 tbsp</p>
+                        <a href="#" onclick="openModal('chili_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Soy Sauce</p>
-                <img src="../images/soy_sauce.jpg" alt="soy sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Sugar</p>
-                <img src="../images/sugar.jpg" alt="sugar">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Oyster Sauce</p>
+                        <img src="../images/oyster_sauce.jpg" alt="oyster sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('oyster_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/pepper.jpg" alt="black pepper">
-                <p>1/2 tsp</p>
-                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Soy Sauce</p>
+                        <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Cooking Oil</p>
-                <img src="../images/oil.jpg" alt="cooking oil">
-                <p>3 tbsp</p>
-                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Sugar</p>
+                        <img src="../images/sugar.jpg" alt="sugar">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+                    </section>
 
+                    <section class="ingredient">
+                        <p>Black Pepper</p>
+                        <img src="../images/pepper.jpg" alt="black pepper">
+                        <p>1/2 tsp</p>
+                        <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Cooking Oil</p>
+                        <img src="../images/oil.jpg" alt="cooking oil">
+                        <p>3 tbsp</p>
+                        <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                    </section>
+                </section>
         </section>
 
         <section class="recipe">
