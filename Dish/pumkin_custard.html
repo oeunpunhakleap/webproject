@@ -6,119 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pumkin Custard</title>
     <link rel="stylesheet" href="recipe_template.css">
-    <!-- google font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-
-
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 <body>
-    <script src="shop.js"></script>
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Pumkin Custard</h1>
-                <h2>សង់ខ្យាល្ពៅ</h2>
-                <p>Num Sankhya Lapov (Khmer Pumpkin Custard) is a traditional Cambodian dessert where a whole pumpkin is hollowed out and filled with a rich, sweet coconut custard. It is then steamed until the custard is set, creating a creamy, fragrant filling inside the soft, tender pumpkin.</p>
-                <p id="calories">Calories <br> 960 kcal (240 kcal per serving)</p>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Pumkin Custard</h1>
+                    <h2 class="khmer-title">សង់ខ្យាល្ពៅ</h2>
+                    <p class="description">Num Sankhya Lapov (Khmer Pumpkin Custard) is a traditional Cambodian dessert where a whole pumpkin is hollowed out and filled with a rich, sweet coconut custard. It is then steamed until the custard is set, creating a creamy, fragrant filling inside the soft, tender pumpkin.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span> up to 60m</span></div>
+                        <div class="info-chip">Calorie <span>960 kcal (240 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.9/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/pumkin_custard.jpg" alt="Pumkin Custard">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+        
+
+                <section class="ingredients-wrapper" id = "ingredientSlider">
+                    <section class="ingredients">
+                        <p>Pumpkin</p>
+                        <img src="../images/pumkin.webp" alt="pumpkin">
+                        <p>1 medium</p>
+                        <a href="#" onclick="openModal('pumpkin') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Coconut Milk</p>
+                        <img src="../images/coconut_milk.jpg" alt="coconut_milk">
+                        <p>400ml</p>
+                        <a href="#" onclick="openModal('coconut_milk') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Eggs</p>
+                        <img src="../images/eggs.jpg" alt="eggs">
+                        <p>4</p>
+                        <a href="#" onclick="openModal('eggs') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Palm Sugar</p>
+                        <img src="../images/palm_sugar.jpg" alt="palm_sugar">
+                        <p>100g</p>
+                        <a href="#" onclick="openModal('palm_sugar') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Pandan Leaves</p>
+                        <img src="../images/pandan.webp" alt="pandan_leaves">
+                        <p>2-3 leaves</p>
+                        <a href="#" onclick="openModal('pandan') ; return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Vanilla Extract</p>
+                        <img src="../images/vanilla.webp" alt="vanilla_extract">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('vanilla_extract') ; return false">Buy Now</a>
+                    </section>
+
             </section>
-            <img src="../images/pumkin_custard.jpg" alt="pumkin custard" width="300">
-        </section>
+        </section>    
+            <section class="recipe">
+                <ol>
+                    <li>
+                        <h4>Step 1: Prepare the pumpkin</h4>
+                        <ul>
+                            <li>Wash the pumpkin thoroughly</li>
+                            <li>Cut the top to make a lid and scoop out the seeds</li>
+                            <li>Set aside the pumpkin and lid</li>
+                        </ul>
+                    </li>
 
+                    <li>
+                        <h4>Step 2: Make the custard mixture</h4>
+                        <ul>
+                            <li>Mix eggs, coconut milk, and palm sugar in a bowl</li>
+                            <li>Add vanilla extract and pandan leaves for aroma</li>
+                            <li>Whisk until smooth and well combined</li>
+                        </ul>
+                    </li>
 
-        <section class="ingredients">
+                    <li>
+                        <h4>Step 3: Fill the pumpkin</h4>
+                        <ul>
+                            <li>Pour the custard mixture into the hollowed pumpkin</li>
+                            <li>Place the pumpkin lid on top</li>
+                        </ul>
+                    </li>
 
-           <section class="ingredient">
-                <p>Pumpkin</p>
-                <img src="../images/pumkin.webp" alt="pumpkin">
-                <p>1 medium</p>
-                <a href="#" onclick="openModal('pumpkin') ; return false">Buy Now</a>
-            </section>
+                    <li>
+                        <h4>Step 4: Steam the pumpkin</h4>
+                        <ul>
+                            <li>Place the pumpkin in a steamer</li>
+                            <li>Steam for 45-60 minutes until custard is set</li>
+                            <li>Check by inserting a knife; it should come out clean</li>
+                        </ul>
+                    </li>
 
-            <section class="ingredient">
-                <p>Coconut Milk</p>
-                <img src="../images/coconut_milk.jpg" alt="coconut_milk">
-                <p>400ml</p>
-                <a href="#" onclick="openModal('coconut_milk') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Eggs</p>
-                <img src="../images/eggs.jpg" alt="eggs">
-                <p>4</p>
-                <a href="#" onclick="openModal('eggs') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Palm Sugar</p>
-                <img src="../images/palm_sugar.jpg" alt="palm_sugar">
-                <p>100g</p>
-                <a href="#" onclick="openModal('palm_sugar') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Pandan Leaves</p>
-                <img src="../images/pandan.webp" alt="pandan_leaves">
-                <p>2-3 leaves</p>
-                <a href="#" onclick="openModal('pandan') ; return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Vanilla Extract</p>
-                <img src="../images/vanilla.webp" alt="vanilla_extract">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('vanilla_extract') ; return false">Buy Now</a>
-            </section>
-
-        </section>
-        <section class="recipe">
-            <ol>
-                <li>
-                    <h4>Step 1: Prepare the pumpkin</h4>
-                    <ul>
-                        <li>Wash the pumpkin thoroughly</li>
-                        <li>Cut the top to make a lid and scoop out the seeds</li>
-                        <li>Set aside the pumpkin and lid</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h4>Step 2: Make the custard mixture</h4>
-                    <ul>
-                        <li>Mix eggs, coconut milk, and palm sugar in a bowl</li>
-                        <li>Add vanilla extract and pandan leaves for aroma</li>
-                        <li>Whisk until smooth and well combined</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h4>Step 3: Fill the pumpkin</h4>
-                    <ul>
-                        <li>Pour the custard mixture into the hollowed pumpkin</li>
-                        <li>Place the pumpkin lid on top</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h4>Step 4: Steam the pumpkin</h4>
-                    <ul>
-                        <li>Place the pumpkin in a steamer</li>
-                        <li>Steam for 45-60 minutes until custard is set</li>
-                        <li>Check by inserting a knife; it should come out clean</li>
-                    </ul>
-                </li>
-
-                <li>
-                    <h4>Step 5: Serve</h4>
-                    <ul>
-                        <li>Let the pumpkin cool slightly</li>
-                        <li>Slice and serve warm or at room temperature</li>
-                    </ul>
-                </li>
-            </ol>
+                    <li>
+                        <h4>Step 5: Serve</h4>
+                        <ul>
+                            <li>Let the pumpkin cool slightly</li>
+                            <li>Slice and serve warm or at room temperature</li>
+                        </ul>
+                    </li>
+                </ol>
 
         </section>
     </main>
