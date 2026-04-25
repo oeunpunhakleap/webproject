@@ -5,129 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minced Pork Napa Cabbage Soup</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
+    <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
 </head>
 
 <body>
-    <script src="shop.js"></script>
+    <main class = "container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Minced Pork Napa Cabbage Soup</h1>
-                <h2>ស៊ុបស្ពៃបូកគោ</h2>
-                <p>This Khmer soup is made with minced pork and napa cabbage simmered in a light, flavorful broth. It is simple, comforting, and perfect for everyday meals.</p>
-                <p id="calories">Calories <br> 600 kcal (200 kcal per serving)</p>
-            </section>
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
 
-            <img class="imga" src="../images/napa_soup.jpg" alt="Minced pork napa cabbage soup" width="300">
-        </section>
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Khmer Cuisine</span>
+                    <h1>Minced Pork Napa Cabbage Soup</h1>
+                    <h2 class="khmer-title">ស៊ុបស្ពៃបូកគោ</h2>
+                    <p class="description">This Khmer soup is made with minced pork and napa cabbage simmered in a light, flavorful broth. It is simple, comforting, and perfect for everyday meals.</p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>25m</span></div>
+                        <div class="info-chip">Calories <span>600 kcal (200 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.4/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/napa_soup.jpg" alt="Minced pork napa cabbage soup">
+                </section>
+        </header>
 
-        <section class="ingredients">
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
 
-            <section class="ingredient">
-                <p>Minced Pork</p>
-                <img src="../images/minced_pork.jpg" alt="minced pork">
-                <p>300g</p>
-                <a href="#" onclick="openModal('minced_pork'); return false">Buy Now</a>
-            </section>
+                <section class="ingredients-wrapper" id="ingredientSlider">
 
-            <section class="ingredient">
-                <p>Napa Cabbage</p>
-                <img src="../images/napa_cabbage.jpg" alt="napa cabbage">
-                <p>1 small head</p>
-                <a href="#" onclick="openModal('napa_cabbage'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Minced Pork</p>
+                        <img src="../images/minced_pork.jpg" alt="minced pork">
+                        <p>300g</p>
+                        <a href="#" onclick="openModal('minced_pork'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Carrot</p>
-                <img src="../images/carrot.webp" alt="carrot">
-                <p>1 small</p>
-                <a href="#" onclick="openModal('carrots'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Napa Cabbage</p>
+                        <img src="../images/napa_cabbage.jpg" alt="napa cabbage">
+                        <p>1 small head</p>
+                        <a href="#" onclick="openModal('napa_cabbage'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Raddis</p>
-                <img src="../images/radish.jpg" alt="raddis">
-                <p>1 small</p>
-                <a href="#" onclick="openModal('radish'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Carrot</p>
+                        <img src="../images/carrot.webp" alt="carrot">
+                        <p>1 small</p>
+                        <a href="#" onclick="openModal('carrots'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Shiitake Mushrooms</p>
-                <img src="../images/shiitake_mushroom.png" alt="shiitake mushrooms">
-                <p>100g</p>
-                <a href="#" onclick="openModal('shiitake_mushrooms'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Raddis</p>
+                        <img src="../images/radish.jpg" alt="raddis">
+                        <p>1 small</p>
+                        <a href="#" onclick="openModal('radish'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Dried Shrimp</p>
-                <img src="../images/dried_shrimp.jpeg" alt="dried shrimp">
-                <p>4-5 pieces</p>
-                <a href="#" onclick="openModal('dried_shrimp'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Shiitake Mushrooms</p>
+                        <img src="../images/shiitake_mushroom.png" alt="shiitake mushrooms">
+                        <p>100g</p>
+                        <a href="#" onclick="openModal('shiitake_mushrooms'); return false">Buy Now</a>
+                    </section>
 
-             <section class="ingredient">
-                <p>Dried Stingray</p>
-                <img src="../images/dried_stingray.jpg" alt="dried stingray">
-                <p>1-2 pieces</p>
-                <a href="#" onclick="openModal('dried_stingray'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Dried Shrimp</p>
+                        <img src="../images/dried_shrimp.jpeg" alt="dried shrimp">
+                        <p>4-5 pieces</p>
+                        <a href="#" onclick="openModal('dried_shrimp'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>3 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Dried Stingray</p>
+                        <img src="../images/dried_stingray.jpg" alt="dried stingray">
+                        <p>1-2 pieces</p>
+                        <a href="#" onclick="openModal('dried_stingray'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Green Onion</p>
-                <img src="../images/spring_onion.jpg" alt="green onion">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>3 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Green Onion</p>
+                        <img src="../images/spring_onion.jpg" alt="green onion">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/pepper.jpg" alt="pepper">
-                <p>½ tsp</p>
-                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Water</p>
-                <img src="../images/water.png" alt="water">
-                <p>1 liter</p>
-                <a href="#" onclick="openModal('water'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Black Pepper</p>
+                        <img src="../images/pepper.jpg" alt="pepper">
+                        <p>½ tsp</p>
+                        <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Green Onion</p>
-                <img src="../images/green_onions.jpg" alt="green onion">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('green_onions'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Water</p>
+                        <img src="../images/water.png" alt="water">
+                        <p>1 liter</p>
+                        <a href="#" onclick="openModal('water'); return false">Buy Now</a>
+                    </section>
 
-            <section class="ingredient">
-                <p>Cooking Oil</p>
-                <img src="../images/oil.jpg" alt="cooking oil">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
-            </section>
+                    <section class="ingredient">
+                        <p>Green Onion</p>
+                        <img src="../images/green_onions.jpg" alt="green onion">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('green_onions'); return false">Buy Now</a>
+                    </section>
 
+                    <section class="ingredient">
+                        <p>Cooking Oil</p>
+                        <img src="../images/oil.jpg" alt="cooking oil">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('oil'); return false">Buy Now</a>
+                    </section>
+                </section>
         </section>
 
         <section class="recipe">
