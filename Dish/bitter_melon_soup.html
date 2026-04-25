@@ -5,122 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitter Melon Soup</title>
     <link rel="stylesheet" href="recipe_template.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
-    </style>
-</head>
-
-<body>
     <script src="shop.js"></script>
+    <script src="../main/search.js"></script>
+    <script src="../main/nav.js"></script>
+</head>
+<body>
+    <main class="container">
+        <nav class="navbar">
+            <p class="JN">Jeat Nas</p>  
 
-    <main>
-        <section class="intro">
-            <section class="description">
-                <h1>Bitter Melon Soup</h1>
-                <h2>ស្ងោរម្រះ</h2>
-                <p>Bitter Melon Soup is a traditional Khmer dish made with stuffed bitter melon, minced pork, and clear broth. It has a slightly bitter taste balanced with savory flavors, making it both healthy and comforting.</p>
-                <p id="calories">Calories <br> 600 kcal (200 kcal per serving)</p>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right-group" id="navMenu">
+                <a href="../main/main.html" class="nav-bar">Home</a>
+                <a href="../main/menu.html" class="nav-bar">Menu</a>
+                <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
+                    <div id="results"></div>
+                </div>
+                <a href="../main/main.html#about-us" class="nav-bar">About us</a>
+            </div>
+        </nav>
+
+        <header class="recipe-header">
+                <section class="header-content">
+                    <span class="category">Traditional Khmer Cuisine</span>
+                    <h1>Bitter Melon Soup</h1>
+                    <h2 class="khmer-title">ស្ងោរម្រះ</h2>
+                    <p class="description">Bitter Melon Soup is a traditional Khmer dish made with stuffed bitter melon, minced pork, and clear broth. It has a slightly bitter taste balanced with savory flavors, making it both healthy and comforting.</p></p>
+                    
+                    <section class="info-bar">
+                        <div class="info-chip">Duration <span>45m</span></div>
+                        <div class="info-chip">Calories <span>600 kcal (200 kcal per serving)</span></div>
+                        <div class="info-chip">Rating <span>4.5/5</span></div>
+                    </section>
+                </section>
+                <section class="header-image">
+                    <img src="../images/bitter_melon_soup.jpg" alt="Bitter Melon Soup">
+                </section>
+        </header>
+
+        <section class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            
+            <section class="slider-container">
+                <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
+                <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
+
+                <section class="ingredients-wrapper" id="ingredientSlider">
+
+
+                    <section class="ingredient">
+                        <p>Bitter Melon</p>
+                        <img src="../images/bitter_melon.jpg" alt="bitter melon">
+                        <p>2–3 pieces</p>
+                        <a href="#" onclick="openModal('bitter_melon'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Minced Pork</p>
+                        <img src="../images/minced_pork.jpg" alt="minced pork">
+                        <p>300g</p>
+                        <a href="#" onclick="openModal('minced_pork'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Glass Noodles</p>
+                        <img src="../images/glass_noodles.jpg" alt="glass noodles">
+                        <p>50g</p>
+                        <a href="#" onclick="openModal('glass_noodle'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Dried Shrimp</p>
+                        <img src="../images/dried_shrimp.jpeg" alt="dried shrimp">
+                        <p>4-5 pieces</p>
+                        <a href="#" onclick="openModal('dried_shrimp'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Dried Stingray</p>
+                        <img src="../images/dried_stingray.jpg" alt="dried stingray">
+                        <p>1-2 pieces</p>
+                        <a href="#" onclick="openModal('dried_stingray'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg" alt="garlic">
+                        <p>3 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Shallots</p>
+                        <img src="../images/shallots.jpg" alt="shallots">
+                        <p>2 small</p>
+                        <a href="#" onclick="openModal('shallots'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg" alt="fish sauce">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Soy Sauce</p>
+                        <img src="../images/soy_sauce.jpg" alt="soy sauce">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Sugar</p>
+                        <img src="../images/sugar.jpg" alt="sugar">
+                        <p>1 tbsp</p>
+                        <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Black Pepper</p>
+                        <img src="../images/pepper.jpg" alt="black pepper">
+                        <p>1 tsp</p>
+                        <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Water</p>
+                        <img src="../images/water.png" alt="water">
+                        <p>1 liter</p>
+                        <a href="#" onclick="openModal('water'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Spring Onion</p>
+                        <img src="../images/spring_onion.jpg" alt="spring onion">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
+                    </section>
             </section>
-
-            <img class="imga" src="../images/bitter_melon_soup.jpg" alt="Bitter Melon Soup" width="300">
-        </section>
-
-        <section class="ingredients">
-
-            <section class="ingredient">
-                <p>Bitter Melon</p>
-                <img src="../images/bitter_melon.jpg" alt="bitter melon">
-                <p>2–3 pieces</p>
-                <a href="#" onclick="openModal('bitter_melon'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Minced Pork</p>
-                <img src="../images/minced_pork.jpg" alt="minced pork">
-                <p>300g</p>
-                <a href="#" onclick="openModal('minced_pork'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Glass Noodles</p>
-                <img src="../images/glass_noodles.jpg" alt="glass noodles">
-                <p>50g</p>
-                <a href="#" onclick="openModal('glass_noodle'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Dried Shrimp</p>
-                <img src="../images/dried_shrimp.jpeg" alt="dried shrimp">
-                <p>4-5 pieces</p>
-                <a href="#" onclick="openModal('dried_shrimp'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Dried Stingray</p>
-                <img src="../images/dried_stingray.jpg" alt="dried stingray">
-                <p>1-2 pieces</p>
-                <a href="#" onclick="openModal('dried_stingray'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Garlic</p>
-                <img src="../images/garlic.jpg" alt="garlic">
-                <p>3 cloves</p>
-                <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Shallots</p>
-                <img src="../images/shallots.jpg" alt="shallots">
-                <p>2 small</p>
-                <a href="#" onclick="openModal('shallots'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Fish Sauce</p>
-                <img src="../images/fish_sauce.jpg" alt="fish sauce">
-                <p>2 tbsp</p>
-                <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Soy Sauce</p>
-                <img src="../images/soy_sauce.jpg" alt="soy sauce">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('soy_sauce'); return false">Buy Now</a>
-            </section>
-
-             <section class="ingredient">
-                <p>Sugar</p>
-                <img src="../images/sugar.jpg" alt="sugar">
-                <p>1 tbsp</p>
-                <a href="#" onclick="openModal('palm_sugar'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Black Pepper</p>
-                <img src="../images/pepper.jpg" alt="black pepper">
-                <p>1 tsp</p>
-                <a href="#" onclick="openModal('black_pepper'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Water</p>
-                <img src="../images/water.png" alt="water">
-                <p>1 liter</p>
-                <a href="#" onclick="openModal('water'); return false">Buy Now</a>
-            </section>
-
-            <section class="ingredient">
-                <p>Spring Onion</p>
-                <img src="../images/spring_onion.jpg" alt="spring onion">
-                <p>2 stalks</p>
-                <a href="#" onclick="openModal('spring_onion'); return false">Buy Now</a>
-            </section>
-
         </section>
 
         <section class="recipe">
