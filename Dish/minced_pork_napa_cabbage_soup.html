@@ -3,155 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minced Pork and Napa Cabbage Soup</title>
     <link rel="stylesheet" href="recipe_template.css">
     <script src="shop.js"></script>
     <script src="../main/search.js"></script>
     <script src="../main/nav.js"></script>
 </head>
 <body>
-    <main class = "container">
+    <main class="container">
+
+     
         <nav class="navbar">
             <p class="JN">Jeat Nas</p>
-            
+
             <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
 
             <div class="nav-right-group" id="navMenu">
                 <a href="../main/main.html" class="nav-bar">Home</a>
                 <a href="../main/menu.html" class="nav-bar">Menu</a>
                 <a href="../main/main.html#food-rec" class="nav-bar">Recommendation</a>
+
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDish()">
                     <div id="results"></div>
                 </div>
+
                 <a href="../main/main.html#about-us" class="nav-bar">About us</a>
             </div>
         </nav>
 
+    
         <header class="recipe-header">
-                    <section class="header-content">
-                        <span class="category">Traditional Khmer Cuisine</span>
-                        <h1>Minced Pork and Napa Cabbage Soup</h1>
-                        <h2 class="khmer-title">ស៊ុបស្ពៃបូកគោ</h2>
-                        <p class="description">Minced Pork and Napa Cabbage Soup is a comforting and flavorful Cambodian dish made with ground pork, napa cabbage, and a savory broth. It is often enjoyed as a light meal or appetizer, perfect for warming up on a chilly day.</p></p>
-                        
-                        <section class="info-bar">
-                            <div class="info-chip">Duration <span>30m</span></div>
-                            <div class="info-chip">Calorie <span>350 kcal per serving</span></div>
-                            <div class="info-chip">Rating <span>4.5/5</span></div>
-                        </section>
-                    </section>
-                    <section class="header-image">
-                        <img src="../images/minced_pork_napa_cabbage_soup.jpg" alt="Minced Pork and Napa Cabbage Soup">
-                    </section>  
+            <section class="header-content">
+                <span class="category">Traditional Khmer Cuisine</span>
+                <h1>Minced Pork and Napa Cabbage Soup</h1>
+                <h2 class="khmer-title">ស៊ុបស្ពៃបូកគោ</h2>
+
+                <p class="description">
+                    Minced Pork and Napa Cabbage Soup is a comforting and flavorful Cambodian dish made with ground pork, napa cabbage, and a savory broth.
+                </p>
+
+                <section class="info-bar">
+                    <div class="info-chip">Duration <span>30m</span></div>
+                    <div class="info-chip">Calorie <span>350 kcal per serving</span></div>
+                    <div class="info-chip">Rating <span>4.5/5</span></div>
+                </section>
+            </section>
+
+            <section class="header-image">
+                <!-- SAME NAME -->
+                <img src="../images/minced_pork_napa_cabbage_soup.jpg" alt="Minced Pork and Napa Cabbage Soup">
+            </section>
         </header>
 
         <section class="ingredients-section">
-            <h3 class = "section-title">Ingredients</h3>   
+            <h3 class="section-title">Ingredients</h3>
+
             <section class="slider-container">
                 <button class="scroll-btn left" onclick="scrollSlider(-1)">❮</button>
                 <button class="scroll-btn right" onclick="scrollSlider(1)">❯</button>
-                <div class="slider" id="ingredientsSlider">
-                    <div class="slider-item">
-                        <img src="../images/ground_pork.jpg" alt="Ground Pork">
-                        <p>Ground Pork - 200g</p>
-                    </div>
-                    <div class="slider-item">
-                        <img src="../images/napa_cabbage.jpg" alt="Napa Cabb    age">
-                        <p>Napa Cabbage - 1/2 head</p>
-                    </div>
-                    <div class="slider-item">
-                        <img src="../images/garlic.jpg" alt="Garlic">
-                        <p>Garlic - 3 cloves</p>                                            
-                    </div>
-                    <div class="slider-item">
-                        <img src="../images/ginger.jpg" alt="Ginger">
-                        <p>Ginger - 1 inch piece</p>
-                    </div>
-                    <div class="slider-item">       
-                        <img src="../images/chicken_broth.jpg" alt="Chicken Broth">
-                        <p>Chicken Broth - 4 cups</p>
-                    </div>
-                    <div class="slider-item">
-                        <img src="../images/fish_sauce.jpg" alt="Fish Sauce">
-                        <p>Fish Sauce - 2 tbsp</p>
-                    </div>
-                    <div class="slider-item">       
-                        <img src="../images/white_pepper.jpg" alt="White Pepper">
-                        <p>White Pepper - 1/2 tsp</p>
-                    </div>
-                    <div class="slider-item">
-                        <img src="../images/green_onions.jpg" alt="Green Onions">
-                        <p>Green Onions - 2 stalks</p>
-                    </div>
-                </div>
+
+                <section class="ingredients-wrapper" id="ingredientSlider">
+
+                    <section class="ingredient">
+                        <p>Ground Pork</p>
+                        <img src="../images/minced_pork.jpg">
+                        <p>200g</p>
+                        <a href="#" onclick="openModal('pork'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Napa Cabbage</p>
+                        <img src="../images/napa_cabbage.jpg">
+                        <p>1/2 head</p>
+                        <a href="#" onclick="openModal('cabbage'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Garlic</p>
+                        <img src="../images/garlic.jpg">
+                        <p>3 cloves</p>
+                        <a href="#" onclick="openModal('garlic'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Ginger</p>
+                        <img src="../images/ginger.webp">
+                        <p>1 inch piece</p>
+                        <a href="#" onclick="openModal('ginger'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Chicken Broth</p>
+                        <img src="../images/chicken_broth.avif">
+                        <p>4 cups</p>
+                        <a href="#" onclick="openModal('broth'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Fish Sauce</p>
+                        <img src="../images/fish_sauce.jpg">
+                        <p>2 tbsp</p>
+                        <a href="#" onclick="openModal('fish_sauce'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>White Pepper</p>
+                        <img src="../images/white_pepper.webp">
+                        <p>1/2 tsp</p>
+                        <a href="#" onclick="openModal('pepper'); return false">Buy Now</a>
+                    </section>
+
+                    <section class="ingredient">
+                        <p>Green Onions</p>
+                        <img src="../images/green_onions.jpg">
+                        <p>2 stalks</p>
+                        <a href="#" onclick="openModal('green_onion'); return false">Buy Now</a>
+                    </section>
+
+                </section>
             </section>
-        </section>      
-        
-        <section class = "recipe">
+        </section>
+
+   
+        <section class="recipe">
             <ol>
                 <li>
                     <h4>Step 1: Prepare ingredients</h4>
                     <ul>
-                        <li>Wash and cut napa cabbage into pieces</li>
-                        <li>Slice carrot and radish into small pieces</li>
-                        <li>Cut shiitake mushrooms</li>
-                        <li>Chop garlic, shallots, and green onions</li>
-                    </ul>
-                </li>
-                <li>
-                    <h4>Step 2: Stir-fry base</h4>
-                    <ul>
-                        <li>Heat cooking oil in a pot</li>
-                        <li>Add garlic, dried shrimp, dried stingray and stir until fragrant</li>
-                        <li>Add shiitake mushrooms and stir-fry first</li>
+                        <li>Wash and cut napa cabbage</li>
+                        <li>Chop garlic and ginger</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 3: Add water</h4>
+                    <h4>Step 2: Cook base</h4>
                     <ul>
-                        <li>Pour in water</li>
-                        <li>Bring to a boil</li>
+                        <li>Boil chicken broth</li>
+                        <li>Add garlic and ginger</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 4: Add minced pork</h4>
+                    <h4>Step 3: Add pork</h4>
                     <ul>
-                        <li>Add minced pork into the boiling soup</li>
-                        <li>Stir gently to separate the meat</li>
-                        <li>Cook until pork is fully done</li>
+                        <li>Add minced pork and stir gently</li>
+                        <li>Cook until fully done</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 5: Add vegetables</h4>
+                    <h4>Step 4: Add vegetables</h4>
                     <ul>
-                        <li>Add napa cabbage, carrot, and radish</li>
-                        <li>Cook until vegetables are tender</li>
+                        <li>Add napa cabbage</li>
+                        <li>Cook until soft</li>
                     </ul>
                 </li>
 
                 <li>
-                    <h4>Step 6: Finish and serve</h4>
+                    <h4>Step 5: Season</h4>
                     <ul>
-                        <li>Add fish sauce and black pepper to taste</li>
-                        <li>Add green onions</li>
-                        <li>Serve hot with rice</li>
+                        <li>Add fish sauce and pepper</li>
+                        <li>Adjust taste</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h4>Step 6: Serve</h4>
+                    <ul>
+                        <li>Top with green onions</li>
+                        <li>Serve hot</li>
                     </ul>
                 </li>
             </ol>
         </section>
+
     </main>
 
+
     <footer>
-        <a href="https://youtu.be/NHhDeh982oE?si=x_gE7d6R8az7tfZp">Here is the link to a tutorial youtube video </a>
+        <a href="https://youtu.be/NHhDeh982oE?si=x_gE7d6R8az7tfZp">
+            Here is the link to a tutorial youtube video
+        </a>
     </footer>
+
 
     <div id="shopModal" class="modal">
         <div class="modal-content">
@@ -166,6 +203,6 @@
             <button onclick="closeModal()">Cancel</button>
         </div>
     </div>
-    
+
 </body>
 </html>
