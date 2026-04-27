@@ -365,3 +365,11 @@ body{
 
     .search-box { width: 80%; }
 }
+
+footer{
+  font-size: smaller;
+  color: #ffffff;
+  text-align: center;
+  background-color: rgb(103, 53, 3);
+  padding: 30px;
+}
