@@ -116,15 +116,6 @@ body{
     margin: 10px 0;
 }
 
-.btn-home {
-    display: inline-block;
-    background-color: #b0976d; 
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 14px;
-    margin-top: 20px;
-}
 .rec-card{
   background-color: rgb(105, 36, 6);
   width: 100%;

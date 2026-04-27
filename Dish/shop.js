@@ -298,24 +298,13 @@ window.onclick = function(event) {
 
 function scrollSlider(direction) {
     const slider = document.getElementById('ingredientSlider');
-    const scrollAmount = 240; // Card width + gap
+    const scrollAmount = 1000; // Card width + gap
     
     slider.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth'
     });
 }
-
-slider.addEventListener('mousedown', () => {
-    isDown = true;
-    slider.style.scrollBehavior = 'auto'; // Turn off smooth scroll for instant dragging
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.style.scrollBehavior = 'smooth'; // Turn it back on for button clicks
-});
-
 
 const slider = document.getElementById('ingredientSlider');
 let isDown = false;
